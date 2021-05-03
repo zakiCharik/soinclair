@@ -1,0 +1,64 @@
+{% extends '/admin/index.html.twig' %}
+
+{% block title_admin %}Adherant index{% endblock %}
+{% block title_page_admin %}Espace adhérent <small>accès administrateur</small>{% endblock %}
+
+{% block content %}
+<div class="x_panel">
+    <div class="x_content">
+
+        <a href="{{ path('adherant_index') }}" class="btn btn-app">
+            <i class="fa fa-list"></i> List
+        </a>
+
+        <a href="{{ path('adherant_new') }}" class="btn btn-app">
+            <i class="fa fa-save"></i> Nouveaus
+        </a>
+
+        <a href="{{ path('adherant_import') }}" class="btn btn-app">
+            <i class="fa fa-database"></i> import
+        </a>
+
+        <a href="{{ path('adherant_importzip') }}"  class="btn btn-app">
+            <i class="fa fa-credit-card"></i> import
+            <small>Cartes</small>
+        </a>
+
+    </div>
+</div>
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Import des adhérents</h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <p>
+            Charger le fichier contenant les adhérents en respectant le format du fichier suivant : <br/>
+                <a href="{{ asset('uploads/Template/Template_import.xlsx') }}">
+                    <i class="fa fa-download"></i>Modèle
+                </a>
+            <br>
+        </p>
+        <form  action="{{ path('upload-excel') }}" method="POST"  enctype="multipart/form-data">
+            <div class="item form-group">
+                <label class="col-form-label col-md-3 col-sm-3 label-align">Fichier d'upload</label>
+                <input type="file" name="myfile" class="" />
+            </div>
+
+            <div class="ln_solid"></div>
+            <div class="item form-group">
+                <div class="col-md-6 col-sm-6 offset-md-3">
+                    <button class="btn btn-primary" type="reset">Reset</button>
+                    <input class="btn btn-success" type="submit" value="submit"/>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

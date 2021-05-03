@@ -1,0 +1,104 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Partenaire{% endblock %}
+{%  set partenaire = app.user.partenaires[0] %}
+
+
+{% block menu_espace %}
+    <ul id="menu-espaces" class="sf-menu" >
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('partenaire_show', {'id': partenaire.id }) }}"  class="btn btn-default">
+                Espace Partenaire
+            </a>
+        </li>
+
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('partenaire_show', {'id': partenaire.id }) }}"  class="btn btn-default">
+                Horaires
+            </a>
+        </li>
+
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('partenaire_show', {'id': partenaire.id }) }}"  class="btn btn-default">
+                Contacter Soin Clair
+            </a>
+        </li>
+        <li id="menu-item-2871" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2871">
+            <a href="{{ path('app_logout') }}"><span>Logout</span></a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluuid _content-background">
+        <div class="row">
+            <div class="col-12 _content-header">
+                <h3>L'interface de professionel de santé</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluuid ">
+        <div class="_formulaire_map" style="margin-bottom: 22px;">
+            <div class="row" style="padding-bottom: 25px;padding-left: 10%;padding-right: 10%;padding-top: 25px;background-color: #00a8cdc2; color: #fff;">
+                <div class="col-12">
+                    <h3>Bienvenue {{ partenaire.nom ~ ' ' ~ partenaire.prenom }} !</h3>
+                    <small>Vos coordonnées personnelles</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluuid">
+        <div class="row">
+            <div class="col-12 wpb_wrapper p-xl-5">
+                <table class="table no-border">
+
+                    <tr>
+                        <th width="40%">Nom</th>
+                        <td>{{ partenaire.nom }}</td>
+                    </tr>
+
+                    <tr>
+                        <th width="40%">Prénom</th>
+                        <td width="60%">{{ partenaire.prenom }}</td>
+                    </tr>
+
+                    <tr>
+                        <th width="40%">spécialités</th>
+                        <td width="60%">{{ partenaire.specialite }}</td>
+                    </tr>
+                    <tr>
+                        <th width="40%">Adresse</th>
+                        <td width="60%">{{ partenaire.adresse }}</td>
+                    </tr>
+                    <tr>
+                        <th>Liste des Tarifs</th>
+                        <td><a href="/uploads/partenaire/tarifs/{{  partenaire.logo }}"><i class="fa fa-download"></i> Download fichier</a></td>
+                    </tr>
+                    <tr>
+                        <th width="40%">Profil description</th>
+                        <td width="60%">{{ partenaire.descriptionprofil }}</td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluuid _content-background">
+        <div class="row">
+            <div class="col-12 _content-header">
+                <small>
+                    Besoin d’aide ?
+                    <br/>Contactez nous sur 06 66 24 87 72 ou par mail Contact@soinclair.ma
+                </small>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block body %}{% endblock %}

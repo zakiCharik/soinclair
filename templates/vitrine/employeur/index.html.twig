@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Employeur{% endblock %}
+{%  set employeur = app.user.employeurs[0] %}
+
+
+{% block menu_espace %}
+    <ul id="menu-espaces" class="sf-menu" xmlns:https="http://www.w3.org/1999/xhtml"
+        xmlns:https="http://www.w3.org/1999/xhtml" xmlns:https="http://www.w3.org/1999/xhtml">
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('employeur_show', {'id': employeur.id }) }}"  class="btn btn-default">
+                Profil
+            </a>
+        </li>
+
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('employeur_show', {'id': employeur.id }) }}"  class="btn btn-default">
+                Change Mot de passe
+            </a>
+        </li>
+        <li id="menu-item-2871" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2871">
+            <a href="{{ path('app_logout') }}"><span>Logout</span></a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluuid _content-background">
+        <div class="row">
+            <div class="col-12 _content-header">
+                <h3>Bienvenue dans votre espace Employeur !</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluuid">
+        <div class="row">
+            <div class="col-12 wpb_wrapper">
+                <div>LOGO</div>
+                <div>Carte Soin clair - Durée de Validité</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 wpb_wrapper">
+                <div>Effectif de personnel actualisé</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 wpb_wrapper">
+                <h4>Documents</h4>
+                <div>Effectif de personnel actualisé</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluuid">
+        <div class="row">
+            <div class="col-12 wpb_wrapper">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluuid _content-background">
+        <div class="row">
+            <div class="col-12 _content-header">
+                <h4>
+                    Faites analyser votre devis par des professionnels!<br/>
+                    Envoyez vos questions et votre devis par
+                    <a href="mailto:Contact@soinclair.ma">mail</a> ou sur
+                    <a href="https://api.whatsapp.com/send?phone=212662790345" target="_blank" style="color:#2db742 !important;">Whatsapp</a>
+                </h4>
+                <small>
+                    Besoin d’aide ?
+                    <br/>Contactez nous sur 06 66 24 87 72 ou par mail Contact@soinclair.ma
+                </small>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block body %}{% endblock %}

@@ -1,0 +1,132 @@
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+<div class="item form-group">
+    {{ form_label(form.nom, 'Nom',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.nom, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.nom) }}</small>
+</div>
+<div class="item form-group">
+    {{ form_label(form.prenom, 'Prenom',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.prenom, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.prenom) }}</small>
+</div>
+
+    <div class="item form-group">
+        {{ form_label(form.entreprise, 'Entreprise',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.entreprise, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-building form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.entreprise) }}</small>
+    </div>
+
+<div class="item form-group">
+    {{ form_label(form.specialite, 'Spécialité',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.specialite, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-building form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.specialite) }}</small>
+</div>
+
+
+<div class="item form-group">
+    {{ form_label(form.adresse, 'adresse',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.adresse, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.adresse) }}</small>
+</div>
+
+
+<div class="item form-group">
+    {{ form_label(form.ville, 'Ville',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.ville, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-map-pin form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.ville) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.phone_mobile, 'Téléphone mobile',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.phone_mobile, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-mobile-phone form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.phone_mobile) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.phone_fix, 'Téléphone mobile',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.phone_fix, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.phone_fix) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.logo_path, 'BDD prestataire',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    {{ form_widget(form.logo_path, {'attr': {'class': 'file'}}) }}
+    <small>{{ form_help(form.logo_path) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.logo, 'Tarifs',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    {{ form_widget(form.logo, {'attr': {'class': 'file'}}) }}
+    <small>{{ form_help(form.logo) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.champs_supp, 'Champs supplémentaire',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group ">
+        {{ form_widget(form.champs_supp, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <small>{{ form_help(form.champs_supp) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.description_profil, 'Zone de Text',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group ">
+        {{ form_widget(form.description_profil, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <small>{{ form_help(form.description_profil) }}</small>
+</div>
+
+
+<div class="item form-group">
+    {{ form_label(form.user.email, 'Email',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group has-feedback">
+        {{ form_widget(form.user.email, {'attr': {'class': 'form-control'}}) }}
+        <span class="fa fa-envelope form-control-feedback right" aria-hidden="true"></span>
+    </div>
+    <small>{{ form_help(form.user.email) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.user.username, 'Nom d\'utilisateur',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group">
+        {{ form_widget(form.user.username, {'attr': {'class': 'form-control' }}) }}
+    </div>
+    <small>{{ form_help(form.user.username) }}</small>
+</div>
+
+<div class="ln_solid"></div>
+<div class="item form-group">
+    <div class="col-md-6 col-sm-6 offset-md-3">
+        <button class="btn btn-primary" type="reset">Reset</button>
+        <button class="btn btn-success">{{ button_label|default('Submit') }}</button>
+    </div>
+</div>
+{{ form_end(form) }}

@@ -1,0 +1,91 @@
+{% extends '/admin/index.html.twig' %}
+
+{% block title_admin %}Partenaire show{% endblock %}
+{% block title_page_admin %}Espace Partenaire accès administrateur{% endblock %}
+
+
+{% block content %}
+<div class="x_panel">
+    <div class="x_title">
+        <h2>   Actions
+        </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="x_content">
+        <a href="{{ path('partenaire_index') }}"  class="btn btn-app">
+            <i class="fa fa-list"></i>back to list
+        </a>
+
+        <a href="{{ path('partenaire_new') }}"  class="btn btn-app">
+            <i class="fa fa-save"></i> Nouveau
+        </a>
+
+        <a href="{{ path('partenaire_edit', {'id': partenaire.id}) }}"  class="btn btn-app">
+            <i class="fa fa-edit"></i>edit
+        </a>
+
+        {{ include('partenaire/_delete_form.html.twig') }}
+
+    </div>
+</div>
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Partenaire - <small>{{ partenaire.user.username }}</small> </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Nom & Prénom</th>
+                <td>{{ partenaire.nom ~ ' ' ~ partenaire.prenom }}</td>
+            </tr>
+            <tr>
+                <th>Entreprise</th>
+                <td>{{ partenaire.entreprise }}</td>
+            </tr>
+            <tr>
+                <th>Specialite</th>
+                <td>{{ partenaire.specialite }}</td>
+            </tr>
+            <tr>
+                <th>Adresse</th>
+                <td>{{ partenaire.adresse }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ partenaire.ville }}</td>
+            </tr>
+            <tr>
+                <th>Description profil</th>
+                <td>{{ partenaire.descriptionProfil }}</td>
+            </tr>
+            <tr>
+                <th>Tarifs</th>
+                <td>{{ partenaire.logo }}</td>
+            </tr>
+            <tr>
+                <th>BDD Prestataire</th>
+                <td>{{ partenaire.logoPath }}</td>
+            </tr>
+
+
+        </tbody>
+    </table>
+    </div>
+</div>
+{% endblock %}

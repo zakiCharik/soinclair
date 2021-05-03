@@ -1,0 +1,148 @@
+{% extends '/admin/index.html.twig' %}
+
+{% block title_admin %}Adhérent {% endblock %}
+{% block title_page_admin %}Espace adhérent <small>accès administrateur</small>{% endblock %}
+
+{% block content %}
+    <div class="x_panel">
+        <div class="x_content">
+
+            <a href="{{ path('adherant_index') }}" class="btn btn-app">
+                <i class="fa fa-list"></i> List
+            </a>
+
+            <a href="{{ path('adherant_new') }}" class="btn btn-app">
+                <i class="fa fa-save"></i> Nouveaus
+            </a>
+
+            <a href="{{ path('adherant_import') }}" class="btn btn-app">
+                <i class="fa fa-database"></i> import
+                <small>Adhérents</small>
+            </a>
+
+            <a href="{{ path('adherant_importzip') }}"  class="btn btn-app">
+                <i class="fa fa-credit-card"></i> import
+                <small>Cartes</small>
+            </a>
+
+            <a href="{{ path('adherant_edit', {'id': adherant.id}) }}" class="btn btn-app">
+                <i class="fa fa-edit"></i> Edit
+            </a>
+
+
+            {{ include('adherant/_delete_form.html.twig') }}
+
+        </div>
+    </div>
+
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Profil Adhérent -<small>{{ adherant.numeroSoinclair }}</small></h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <div class="col-md-3 col-sm-3  profile_left">
+
+            <div class="profile_img">
+                <div id="crop-avatar">
+                    {% if adherant.cartesoinclair is not empty %}
+                        <img class="img-responsive avatar-view" src="{{ asset('uploads/cartesoinclair/' ~ adherant.cartesoinclair) }}" alt="Avatar" title="Change the avatar">
+                    {% else %}
+                        <img class="img-responsive avatar-view" src="{{ asset('/admin/production/images/inbox.png') }}" alt="Avatar" title="Change the avatar">
+
+                    {% endif %}
+                </div>
+            </div>
+            <h3>{{ adherant.user.username }}</h3>
+            <ul class="list-unstyled user_data">
+                <li><i class="fa fa-map-marker user-profile-icon"></i> {{ adherant.adresse }},{{ adherant.ville }}, USA
+                </li>
+                <li>
+                    <i class="fa fa-briefcase user-profile-icon"></i> {{ adherant.situationpro }}
+                </li>
+                <li>
+                    <i class="fa fa-briefcase user-profile-icon"></i> {{ adherant.categorysociopro }}
+                </li>
+
+                <li class="m-top-xs">
+                    <i class="fa fa-external-link user-profile-icon"></i>
+                    <a href="#" >{{ adherant.numeroSoinclair }}</a>
+                </li>
+            </ul>
+            <a href="{{ path('adherant_edit', {'id': adherant.id}) }}" class="btn btn-success"><i class="fa fa-edit m-right-xs"></i>Edit Profile</a>
+        </div>
+        <div class="col-md-9 col-sm-9 ">
+            <table class="table">
+                <tbody>
+                <tr>
+                    <th>Entreprise</th>
+                    <td>{{ adherant.entreprise }}</td>
+                </tr>
+                <tr>
+                    <th>Code Client</th>
+                    <td>{{ adherant.codeclient }}</td>
+                </tr>
+                <tr>
+                    <th>Date d'inscription</th>
+                    <td>{{ adherant.subscriptiondate | date }}</td>
+                </tr>
+                <tr>
+                    <th>Date d'éxpiration</th>
+                    <td>{{ adherant.expiringdate | date }}</td>
+                </tr>
+                <tr>
+                    <th>Nom & prénom</th>
+                    <td>{{ adherant.firstname ~ ' ' ~ adherant.lastname }}</td>
+                </tr>
+                <tr>
+                    <th>Nom conjoint 1</th>
+                    <td>{{ adherant.nomconjointfirst }}</td>
+                </tr>
+                <tr>
+                    <th>Nom conjoint 2</th>
+                    <td>{{ adherant.nomconjointsecond }}</td>
+                </tr>
+                <tr>
+                    <th>Nombre d'enfant</th>
+                    <td>{{ adherant.nbrenfant }}</td>
+                </tr>
+
+                <tr>
+                    <th>Date de naissance</th>
+                    <td>{{ adherant.datenaissance | date }}</td>
+                </tr>
+                <tr>
+                    <th>N° mobile</th>
+                    <td>{{ adherant.phonenumber }}</td>
+                </tr>
+
+
+                <tr>
+                    <th>N° Cin</th>
+                    <td>{{ adherant.cin }}</td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="profile_title">
+                <div class="col-md-6">
+                    <h2>User Activity Report</h2>
+                </div>
+                <div class="col-md-6">
+                    <div id="reportrange" class="pull-right" style="margin-top: 5px; background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #E6E9ED">
+                        <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                        <span>March 27, 2021 - April 25, 2021</span> <b class="caret"></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}

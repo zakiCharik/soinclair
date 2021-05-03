@@ -1,0 +1,48 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+    #Adherant parameters
+    upload_cartesoinclair_directory: '%kernel.project_dir%/public/uploads/cartesoinclair'
+    upload_excel_adherant: '%kernel.project_dir%/public/uploads/adherants_import'
+    upload_cards_adherant: '%kernel.project_dir%/public/uploads/adherants_cards'
+    download_template_adherant: '%kernel.project_dir%/public/uploads/Template'
+    #Employeur parameters
+    upload_logo_employeur: '%kernel.project_dir%/public/uploads/employeur/logos'
+    upload_fichieremployeur_employeur: '%kernel.project_dir%/public/uploads/employeur/fichiers_employeur'
+    upload_contratassurance_employeur: '%kernel.project_dir%/public/uploads/employeur/contrat_assurance'
+    #Partenaire parameters
+    upload_tarifs_partenaire: '%kernel.project_dir%/public/uploads/partenaire/tarifs'
+    upload_prestataire_partenaire: '%kernel.project_dir%/public/uploads/partenaire/tarifs'
+services:
+    redirect.after.login:
+        class: App\Service\AfterLoginRedirection
+
+    redirect.after.logout:
+        class: App\Service\AfterLogoutRedirection
+
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+            - '../src/Tests/'
+
+    # controllers are imported separately to make sure services can be injected
+    # as action arguments even if you don't extend any base controller class
+    App\Controller\:
+        resource: '../src/Controller/'
+        tags: ['controller.service_arguments']
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones

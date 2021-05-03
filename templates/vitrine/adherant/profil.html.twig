@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Espace Adhérent{% endblock %}
+{%   set adherant = app.user.adherants[0] %}
+
+
+{% block menu_espace %}
+    <ul id="menu-espaces" class="sf-menu" xmlns:https="http://www.w3.org/1999/xhtml"
+        xmlns:https="http://www.w3.org/1999/xhtml" xmlns:https="http://www.w3.org/1999/xhtml">
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_profil') }}"  class="btn btn-default">
+                Mon profil
+            </a>
+        </li>
+
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_show', {'id': adherant.id }) }}"  class="btn btn-default">
+                Analyse de devis
+            </a>
+        </li>
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_show', {'id': adherant.id }) }}"  class="btn btn-default">
+                Médecins
+            </a>
+        </li>
+
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_show', {'id': adherant.id }) }}"  class="btn btn-default">
+                F.A.Q
+            </a>
+        </li>
+        <li id="menu-item-2871" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2871">
+            <a href="{{ path('app_logout') }}"><span>Logout</span></a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluuid ">
+        <div class="_formulaire_map" style="margin-bottom: 22px;">
+            <div class="row" style="padding-bottom: 25px;padding-left: 10%;padding-right: 10%;padding-top: 25px;background-color: #00a8cdc2; color: #fff;">
+                <div class="col-12">
+                    <h3>Bienvenue {{ adherant.lastname ~ ' ' ~ adherant.firstname }} !</h3>
+                    <small>Vos coordonnées personnelles</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluuid">
+        <div class="row">
+            <div class="col-12 wpb_wrapper p-xl-5">
+                <table class="table no-border">
+
+                    <tr>
+                        <th width="40%">Nom</th>
+                        <td>{{ adherant.lastname }}</td>
+                    </tr>
+
+                    <tr>
+                        <th width="40%">Prénom</th>
+                        <td width="60%">{{ adherant.firstname }}</td>
+                    </tr>
+
+                    <tr>
+                        <th width="40%">Formule soin clair</th>
+                        <td width="60%">{{ adherant.formulesoinclair }}</td>
+                    </tr>
+
+                    <tr>
+                        <th width="40%">Adresse</th>
+                        <td width="60%">{{ adherant.adresse }}</td>
+                    </tr>
+
+                    <tr>
+                        <th width="40%">Entreprise</th>
+                        <td width="60%">{{ adherant.entreprise }}</td>
+                    </tr>
+
+                    <tr>
+                        <th width="40%">Code Client</th>
+                        <td width="60%">{{ adherant.codeclient }}</td>
+                    </tr>
+                    <tr>
+                        <th width="40%">N° Carte Soin Clare</th>
+                        <td width="60%">{{ adherant.numerosoinclair }}</td>
+                    </tr>
+                    <tr>
+                        <th width="40%">Carte Soin Clair</th>
+                        <td width="60%"><img src="/uploads/cartesoinclair/{{  adherant.cartesoinclair }}" width="50"></td>
+                    </tr>
+
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluuid _content-background">
+        <div class="row">
+            <div class="col-12 _content-header">
+                <h4>
+                    Faites analyser votre devis par des professionnels!<br/>
+                    Envoyez vos questions et votre devis par
+                    <a href="mailto:Contact@soinclair.ma">mail</a> ou sur
+                    <a href="https://api.whatsapp.com/send?phone=212662790345" target="_blank" style="color:#2db742 !important;">Whatsapp</a>
+                </h4>
+                <small>
+                    Besoin d’aide ?
+                    <br/>Contactez nous sur 06 66 24 87 72 ou par mail Contact@soinclair.ma
+                </small>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block body %}{% endblock %}

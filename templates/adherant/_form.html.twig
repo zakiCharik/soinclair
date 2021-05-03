@@ -1,0 +1,229 @@
+<br/>
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+    <div class="item form-group">
+        {{ form_label(form.entreprise, 'Entreprise',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.entreprise, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-building form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.entreprise) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.code_client, 'Code client',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.code_client, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-codepen form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.code_client) }}</small>
+    </div>
+
+
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Date d'inscription</label>
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            <input name="adherant[subscription_date]" class="date-picker form-control" type="date" value="{{ adherant.subscriptiondate | date }}">
+        </div>
+    </div>
+
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Date d'expiration</label>
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            <input name="adherant[expiring_date]" class="date-picker form-control" type="date" value="{{ adherant.expiringdate | date }}">
+        </div>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.numero_soinclair, 'N° Carte Soin Clair',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group">
+            {{ form_widget(form.numero_soinclair, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <small>{{ form_help(form.numero_soinclair) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.firstname, 'Nom ',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.firstname, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.firstname) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.lastname, 'Prénom',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.lastname, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.lastname) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.nom_conjoint_first, 'Nom Conjoint 1',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.nom_conjoint_first, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-female form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.nom_conjoint_first) }}</small>
+    </div>
+    <div class="item form-group">
+        {{ form_label(form.nom_conjoint_second, 'Nom Conjoint 2',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.nom_conjoint_second, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-female form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.nom_conjoint_second) }}</small>
+    </div>
+    <div class="item form-group">
+        {{ form_label(form.nbr_enfant, 'Nombre d\'enfant',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group ">
+            {{ form_widget(form.nbr_enfant, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <small>{{ form_help(form.nbr_enfant) }}</small>
+    </div>
+    <div class="item form-group">
+        {{ form_label(form.cin, 'N° de CIN',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group">
+            {{ form_widget(form.cin, {'attr': {'class': 'form-control'}}) }}
+        </div>
+        <small>{{ form_help(form.cin) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.adresse, 'Adresse',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.adresse, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-map-marker form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.adresse) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.ville, 'Ville',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.ville, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-map-pin form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.ville) }}</small>
+    </div>
+
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Date de naissance</label>
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            <input name="adherant[date_naissance]" class="date-picker form-control" type="date" value="{{ adherant.datenaissance | date }}">
+        </div>
+    </div>
+
+    <div class="item form-group has-feedback">
+        {{ form_label(form.phonenumber, 'N° de mobile',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}  } ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.phonenumber, {'attr': {'class': 'form-control','placeholder':'06 00-00-00-00' }}) }}
+            <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.phonenumber) }}</small>
+    </div>
+
+
+    <div class="item form-group">
+        {{ form_label(form.user.email, 'Email',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.user.email, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-envelope form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.user.email) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.user.username, 'Nom d\'utilisateur',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group">
+            {{ form_widget(form.user.username, {'attr': {'class': 'form-control' }}) }}
+        </div>
+        <small>{{ form_help(form.user.username) }}</small>
+    </div>
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Mot de passe par défaut</label>
+        <div class="col-md-6 col-sm-6  form-group">
+            <input name="adherant[user][password]" class="form-control" type="password" value="{{ adherant.user.password }}">
+        </div>
+    </div>
+    <div class="item form-group">
+        {{ form_label(form.situation_pro, 'Situation professionelle',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.situation_pro, {'attr': {'class': 'select2_single form-control'}}) }}
+        </div>
+        <small>{{ form_help(form.situation_pro) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.category_sociopro, 'Catégorie socioprofessionelle',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.category_sociopro, {'attr': {'class': 'select2_single form-control'}}) }}
+        </div>
+        <small>{{ form_help(form.category_sociopro) }}</small>
+    </div>
+
+
+    <div class="item form-group">
+        {{ form_label(form.maladie_chroni, 'Maladie chronique',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.maladie_chroni, {'attr': {'class': 'select2_single form-control'}}) }}
+        </div>
+        <small>{{ form_help(form.maladie_chroni) }}</small>
+    </div>
+    <div class="item form-group">
+        {{ form_label(form.formule_soin_clair, 'Formule SoinClair',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.formule_soin_clair, {'attr': {'class': 'select2_single form-control'}}) }}
+        </div>
+        <small>{{ form_help(form.formule_soin_clair) }}</small>
+    </div>
+
+
+    <div class="item form-group">
+        {{ form_label(form.supp_one, 'Champs supplémentaire 1',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.supp_one, {'attr': {'class': 'form-control' }}) }}
+        </div>
+        <small>{{ form_help(form.supp_one) }}</small>
+    </div>
+
+
+    <div class="item form-group">
+        {{ form_label(form.supp_two, 'Champs supplémentaire 2',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.supp_two, {'attr': {'class': 'form-control' }}) }}
+        </div>
+        <small>{{ form_help(form.supp_two) }}</small>
+    </div>
+
+
+    <div class="item form-group">
+        {{ form_label(form.supp_three, 'Champs supplémentaire 3',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.supp_three, {'attr': {'class': 'form-control' }}) }}
+        </div>
+        <small>{{ form_help(form.supp_three) }}</small>
+    </div>
+
+
+    <div class="item form-group">
+        {{ form_label(form.cartesoinclair, 'N° Carte Soin Clair',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group">
+            {{ form_widget(form.cartesoinclair, {'attr': {'class': 'file'}}) }}
+        </div>
+        <small>{{ form_help(form.cartesoinclair) }}</small>
+    </div>
+
+
+    <div class="ln_solid"></div>
+    <div class="item form-group">
+        <div class="col-md-6 col-sm-6 offset-md-3">
+            <button class="btn btn-primary" type="reset">Reset</button>
+            <button class="btn btn-success">{{ button_label|default('Submit') }}</button>
+        </div>
+    </div>
+{{ form_end(form) }}

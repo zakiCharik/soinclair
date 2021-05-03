@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User{% endblock %}
+
+{% block content %}
+    <h1>User</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ user.id }}</td>
+            </tr>
+            <tr>
+                <th>Username</th>
+                <td>{{ user.username }}</td>
+            </tr>
+            <tr>
+                <th>Firstname</th>
+                <td>{{ user.firstname }}</td>
+            </tr>
+            <tr>
+                <th>Phonenumber</th>
+                <td>{{ user.phonenumber }}</td>
+            </tr>
+            <tr>
+                <th>Created_time</th>
+                <td>{{ user.createdTime ? user.createdTime|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Modified_time</th>
+                <td>{{ user.modifiedTime ? user.modifiedTime|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Is_locked</th>
+                <td>{{ user.isLocked ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <td>{{ user.password }}</td>
+            </tr>
+            <tr>
+                <th>Salt</th>
+                <td>{{ user.salt }}</td>
+            </tr>
+            <tr>
+                <th>Ville</th>
+                <td>{{ user.ville }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr>
+                <th>Subscription_date</th>
+                <td>{{ user.subscriptionDate ? user.subscriptionDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Expiring_date</th>
+                <td>{{ user.expiringDate ? user.expiringDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Role</th>
+                <td>{{ user.role }}</td>
+            </tr>
+            <tr>
+                <th>Type</th>
+                <td>{{ user.type }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('user_index') }}">back to list</a>
+
+    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+
+    {{ include('user/_delete_form.html.twig') }}
+{% endblock %}

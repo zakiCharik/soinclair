@@ -1,0 +1,90 @@
+<br/>
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.entreprise, 'Entreprise',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.entreprise, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-building form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.entreprise) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.activity, 'Activité',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.activity, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-building form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.activity) }}</small>
+    </div>
+
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Date d'inscription</label>
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            <input name="employeur[subscription_date]" class="date-picker form-control" type="date" value="{{ employeur.subscriptiondate | date }}">
+        </div>
+    </div>
+
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Date d'expiration</label>
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            <input name="employeur[expiring_date]" class="date-picker form-control" type="date" value="{{ employeur.expiringdate | date }}">
+        </div>
+    </div>
+
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Mot de passe</label>
+        <div class="col-md-6 col-sm-6  form-group">
+            <input name="employeur[password]" class="form-control" type="password" value="{{ employeur.password }}">
+        </div>
+    </div>
+
+    <div class="item form-group">
+        <label class="col-form-label col-md-3 col-sm-3 label-align">Confirmer le mot de passe</label>
+        <div class="col-md-6 col-sm-6  form-group">
+            <input name="employeur[confirmed_password]" class="form-control" type="password" value="{{ employeur.confirmedpassword }}">
+        </div>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.database_employees, 'Fichier employés',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        {{ form_widget(form.database_employees, {'attr': {'class': 'file'}}) }}
+        <small>{{ form_help(form.database_employees) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.logo, 'Logo',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        {{ form_widget(form.logo, {'attr': {'class': 'file'}}) }}
+        <small>{{ form_help(form.logo) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.user.email, 'Email',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group has-feedback">
+            {{ form_widget(form.user.email, {'attr': {'class': 'form-control'}}) }}
+            <span class="fa fa-envelope form-control-feedback right" aria-hidden="true"></span>
+        </div>
+        <small>{{ form_help(form.user.email) }}</small>
+    </div>
+
+    <div class="item form-group">
+        {{ form_label(form.user.username, 'Nom d\'utilisateur',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+        <div class="col-md-6 col-sm-6  form-group">
+            {{ form_widget(form.user.username, {'attr': {'class': 'form-control' }}) }}
+        </div>
+        <small>{{ form_help(form.user.username) }}</small>
+    </div>
+
+    <div class="ln_solid"></div>
+    <div class="item form-group">
+        <div class="col-md-6 col-sm-6 offset-md-3">
+            <button class="btn btn-primary" type="reset">Reset</button>
+            <button class="btn btn-success">{{ button_label|default('Submit') }}</button>
+        </div>
+    </div>
+
+{{ form_end(form) }}

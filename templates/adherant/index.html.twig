@@ -1,0 +1,103 @@
+{% extends '/admin/index.html.twig' %}
+
+{% block title_admin %}Adherant index{% endblock %}
+{% block title_page_admin %}Espace adhérent accès administrateur{% endblock %}
+
+
+{% block content %}
+<div class="x_panel">
+    <div class="x_title">
+        <h2>   Actions
+        </h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+
+    <div class="x_content">
+        <a href="{{ path('adherant_new') }}"  class="btn btn-app">
+            <i class="fa fa-save"></i> Nouveau
+        </a>
+
+        <a href="{{ path('adherant_import') }}"  class="btn btn-app">
+            <i class="fa fa-database"></i> import
+            <small>Adhérents</small>
+        </a>
+
+
+        <a href="{{ path('adherant_importzip') }}"  class="btn btn-app">
+            <i class="fa fa-credit-card"></i> import
+            <small>Cartes</small>
+        </a>
+
+    </div>
+</div>
+<div class="x_panel">
+    <div class="x_title">
+        <h2>Liste des adhérents</h2>
+        <ul class="nav navbar-right panel_toolbox">
+            <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+            </li>
+            <li><a class="close-link"><i class="fa fa-close"></i></a>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="x_content">
+        <div class="card-box table-responsive">
+            <p class="text-muted font-13 m-b-30">
+                <br/>
+            </p>
+
+                <table id="datatable_adherant" class="table table-striped table-bordered dataTable no-footer">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>N° Soin Clair</th>
+                            <th>Cin</th>
+                            <th>Nom & Prénom</th>
+                            <th>Code Client</th>
+                            <th>Entreprise</th>
+                            <th>actions</th>
+                        </tr>
+
+                    </thead>
+                    <tbody>
+                        {% for adherant in adherants %}
+                            <tr>
+                                <td>{{ adherant.id }}</td>
+                                <td>{{ adherant.numeroSoinclair }}</td>
+                                <td>{{ adherant.cin }}</td>
+                                <td>{{ adherant.lastname ~ ' ' ~ adherant.firstname }}</td>
+                                <td>{{ adherant.codeclient }}</td>
+                                <td>{{ adherant.entreprise }}</td>
+                                <td>
+                                    <a href="{{ path('adherant_show', {'id': adherant.id}) }}"  class="btn btn-default">
+                                        <i class="fa fa-eye"></i> show
+                                    </a>
+                                    <a href="{{ path('adherant_edit', {'id': adherant.id}) }}"  class="btn btn-default">
+                                        <i class="fa fa-edit"></i> Edit
+                                    </a>
+                                </td>
+                            </tr>
+                        {% else %}
+                            <tr>
+                                <td colspan="4">no records found</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+
+                </table>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block extra_script_admin %}
+{% endblock %}
