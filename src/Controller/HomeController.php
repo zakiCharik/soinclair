@@ -42,6 +42,15 @@ class HomeController extends AbstractController
         return $this->render('vitrine/general/nosservices.html.twig');
     }
 
+
+    /**
+     * @Route("/resetpwd", name="resetpwd_soinclair", methods={"GET","HEAD"})
+     */
+    public function resetpwd(): Response
+    {
+        return $this->render('security/reset-password.html.twig');
+    }
+
     /**
      * @Route("/admin", name="admin_page", methods={"GET","HEAD"})
      */
