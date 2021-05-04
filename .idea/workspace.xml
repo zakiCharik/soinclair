@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4cd47165-dac6-400e-b3e8-3c88c5f246a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/public/css/static/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/static/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vitrine/adherant/profil.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vitrine/adherant/profil.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/vitrine/partenaire/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/vitrine/partenaire/index.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="4cd47165-dac6-400e-b3e8-3c88c5f246a4" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,20 +56,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/css/static/base.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="96" selection-start-line="96" selection-end-line="96" />
-            </state>
-          </provider>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.env.local.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/security/reset-password.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
+            <state relative-caret-position="341">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#2250#2332#0#HTML" expanded="true" />
                 <element signature="e#2690#2723#0#HTML" expanded="true" />
@@ -87,6 +77,25 @@
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="80" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="80" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/bundles.php">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -112,24 +121,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="42" column="5" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/security/login.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="66" column="43" selection-start-line="66" selection-start-column="43" selection-end-line="66" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -141,7 +132,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.left</find>
       <find>carou</find>
       <find>app.js</find>
       <find>value=&quot;5</find>
@@ -169,8 +159,9 @@
       <find>hea</find>
       <find>mpc</find>
       <find>footer</find>
-      <find>nos ser</find>
       <find>Espace</find>
+      <find>DATABASE_URL</find>
+      <find>nos ser</find>
     </findStrings>
     <replaceStrings>
       <replace>#00a8cd</replace>
@@ -180,6 +171,7 @@
       <dir>C:\Users\czakaria\lab\projects\soinclair\soin_clair\public\js</dir>
       <dir>C:\Users\czakaria\lab\projects\soinclair\soin_clair\public\css</dir>
       <dir>C:\Users\czakaria\lab\projects\soinclair\soin_clair\public</dir>
+      <dir>C:\Users\czakaria\lab\projects\soinclair\soin_clair\config</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -514,12 +506,12 @@
       <updated>1618847768556</updated>
       <workItem from="1618847770866" duration="2227000" />
       <workItem from="1618870579772" duration="1009000" />
-      <workItem from="1618912039148" duration="194813000" />
+      <workItem from="1618912039148" duration="195952000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198049000" />
+    <option name="totallyTimeSpent" value="199188000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -571,33 +563,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Form/PartenaireType.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="41" column="14" selection-start-line="41" selection-start-column="14" selection-end-line="41" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/AdherantController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/EmployeurController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-          <folding>
-            <element signature="e#34#59#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/PartenaireController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -622,9 +587,6 @@
     <entry file="file://$PROJECT_DIR$/src/Service/AfterLoginRediction.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/routing.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/packages/prod/routing.yaml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -644,9 +606,6 @@
           <caret line="57" column="58" lean-forward="true" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
@@ -773,24 +732,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="32" column="80" selection-start-line="32" selection-start-column="80" selection-end-line="32" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/var/log/dev.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="477">
           <caret line="16640" selection-start-line="16640" selection-end-line="16640" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="34" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -914,6 +859,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/static/resetpwd.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="4312" column="1" selection-start-line="4312" selection-start-column="1" selection-end-line="4312" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/security/reset-password.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#2250#2332#0#HTML" expanded="true" />
+            <element signature="e#2690#2723#0#HTML" expanded="true" />
+            <element signature="e#2945#3074#0#HTML" expanded="true" />
+            <element signature="e#3245#3320#0#HTML" expanded="true" />
+            <element signature="e#3464#3491#0#HTML" expanded="true" />
+            <element signature="e#5775#5857#0#HTML" expanded="true" />
+            <element signature="e#6215#6248#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="80" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/bundles.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/security.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="41" lean-forward="true" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -955,28 +949,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/static/resetpwd.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="4312" column="1" selection-start-line="4312" selection-start-column="1" selection-end-line="4312" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/security/reset-password.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="54" column="40" selection-start-line="54" selection-start-column="40" selection-end-line="54" selection-end-column="40" />
-          <folding>
-            <element signature="e#2250#2332#0#HTML" expanded="true" />
-            <element signature="e#2690#2723#0#HTML" expanded="true" />
-            <element signature="e#2945#3074#0#HTML" expanded="true" />
-            <element signature="e#3245#3320#0#HTML" expanded="true" />
-            <element signature="e#3464#3491#0#HTML" expanded="true" />
-            <element signature="e#5775#5857#0#HTML" expanded="true" />
-            <element signature="e#6215#6248#0#HTML" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.env.local.php">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
