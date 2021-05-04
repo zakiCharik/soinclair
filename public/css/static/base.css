@@ -81,8 +81,8 @@ header {
     width: 100% !important;
     padding: 20px 12px 20px 12px;
     text-align: center;
-    border-bottom: thin #6663 solid;
-    box-shadow: 2px 2px #cdcdcd0d;
+/*    border-bottom: thin #6663 solid;
+    box-shadow: 2px 2px #cdcdcd0d;*/
 }
 body {
     font-family: Roboto;
