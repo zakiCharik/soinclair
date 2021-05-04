@@ -1,4 +1,60 @@
+.mpc-image {
 
+    position: absolute;
+    left: 47%;
+    top: 234px;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header_par{
+    background-color: #ffffff;
+    margin-left: 198px;
+    width: 100%;
+    padding: 5px 55px 5px 29px;
+    margin-top: 100px;
+}
+.right_par{
+    background-color: #f2f2f2 !important;
+}
+.body_par{
+    padding:50px 50px 100px 50px;
+    margin-bottom: 0px;
+}
+.body_par>p{
+    color: #444;
+    font-size: 16px;
+    line-height: 2;
+    text-align: justify;
+}
+
+.box{
+    padding: 15px;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+}
+.box>h3.box-header{
+    color: #444;
+    font-size: 17px;
+    line-height: 1.4;
+    text-align: center;
+    text-transform: uppercase;
+}
+.box>p.box-body{
+    font-style: normal !important;
+    text-transform: none;
+    font-weight: 400 !important;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/*Qui somme nous*/
 .width-auto {
     width: auto;
 }
@@ -22,10 +78,11 @@
 header {
     display: inline-block;
     position: relative;
-    width: 100%;
+    width: 100% !important;
     padding: 20px 12px 20px 12px;
     text-align: center;
-
+    border-bottom: thin #6663 solid;
+    box-shadow: 2px 2px #cdcdcd0d;
 }
 body {
     font-family: Roboto;

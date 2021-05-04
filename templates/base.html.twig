@@ -25,6 +25,8 @@
             <link rel="preconnect" href="https://fonts.gstatic.com">
             <link href="https://fonts.googleapis.com/css2?family=Teko&display=swap" rel="stylesheet">
         {% endblock %}
+        {% block extra_stylesheets %}
+        {% endblock %}
 
     </head>
     <body >
@@ -297,7 +299,6 @@
                     {% endblock %}
 
                 {% block body %}
-
 
                         <main class="vlt-main">
                             <div class="" style="background-image: url('/img/static/dot-gray.jpg');background-position: 50% 50%;height: fit-content;padding-top:45px;">

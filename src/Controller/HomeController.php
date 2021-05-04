@@ -23,7 +23,7 @@ class HomeController extends AbstractController
      */
     public function quisomme(): Response
     {
-        return $this->render('home/index.html.twig');
+        return $this->render('vitrine/general/qui-somme-nous.html.twig');
     }
 
     /**
@@ -31,7 +31,7 @@ class HomeController extends AbstractController
      */
     public function publications(): Response
     {
-        return $this->render('home/index.html.twig');
+        return $this->render('vitrine/general/nos-publications.html.twig');
     }
 
     /**
@@ -39,7 +39,7 @@ class HomeController extends AbstractController
      */
     public function services(): Response
     {
-        return $this->render('home/index.html.twig');
+        return $this->render('vitrine/general/nosservices.html.twig');
     }
 
     /**
