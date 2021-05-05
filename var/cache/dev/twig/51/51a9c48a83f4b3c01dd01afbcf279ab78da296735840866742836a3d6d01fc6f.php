@@ -88,41 +88,41 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                  ";
         // line 56
         $this->displayBlock('content', $context, $blocks);
-        // line 237
+        // line 229
         echo "
              </div>
 
                     ";
-        // line 240
+        // line 232
         $this->displayBlock('menu_header', $context, $blocks);
-        // line 241
+        // line 233
         echo "                    ";
         $this->displayBlock('login_header', $context, $blocks);
-        // line 242
+        // line 234
         echo "
                     ";
-        // line 243
+        // line 235
         $this->displayBlock('sider_header', $context, $blocks);
-        // line 300
+        // line 292
         echo "
                 ";
-        // line 301
+        // line 293
         $this->displayBlock('body', $context, $blocks);
-        // line 492
+        // line 484
         echo "                ";
         $this->displayBlock('footer', $context, $blocks);
-        // line 552
+        // line 544
         echo "
         </div>
     </body>
 
     ";
-        // line 556
+        // line 548
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 660
+        // line 652
         echo "    ";
         $this->displayBlock('map_javascript', $context, $blocks);
-        // line 672
+        // line 664
         echo "</html>
 ";
         
@@ -317,53 +317,45 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                      <a  style=\"    padding: 25px;    margin-left: 91%;\">
                                          <i class=\"material-icons d-none d-xl-block btn-close _close-accordion\" > </i>
                                      </a>
-                                     <div class=\"col col-xl-12\">
-                                         <div class=\"container px-0 px-xl-3\">
-                                             <div class=\"row\">
-                                                 <div class=\"col-6\">
-                                                     <h2 class=\"mb-2\"> Optimiser mes dépenses de santé</h2>
-                                                 </div>
-                                                 <div class=\"col-6\">
-                                                 </div>
-                                                 <div class=\"col-12 col-md-6 col-xl-5\">
-                                                     <div class=\"row\">
-                                                         <div class=\"col-12\" data-eventaction=\"Clicked read more\" data-eventcategory=\"Navigation-Read More\" data-eventlabel=\"Category:People | title:View all people solutions \">
-                                                             <p class=\"font-p-large text-faded mb-2\"> Accédez à un large réseau de professionnels de santé recommandés et au juste prix.
-                                                                 Les prestations de santé telles que les hospitalisations, le dentaire, l’optique, les analyses biologiques, les actes de radiologie… entraînent souvent des dépenses importantes.
-                                                                 Aujourd’hui tous les prestataires ne facturent pas le même prix pour les mêmes procédures médicales, certains professionnels de santé sont trois fois plus chers que d’autres !
-                                                             </p>
-                                                             <a href=\"/services-soin-clair\" class=\"arrow-link p-0 py-md-4\" data-eventaction=\"Clicked read more\" data-eventcategory=\"Navigation-Read More\" data-eventlabel=\"Category:People | title:View all people solutions \"> Nos Services
-                                                                 <i class=\"fa fa-arrow-right\" ></i>
-                                                             </a>
-                                                             <hr class=\"my-4 mb-md-3\">
-                                                         </div>
+                                     <div class=\"row\" style=\"overflow-y: scroll\">
+                                         <div class=\"col\">
+                                             <div class=\"pan-article\">
+                                                 <div class=\"pan-header\">
+                                                     <div class=\"pan-header-label\">
+                                                          <h2 class=\"mb-2\"> Optimiser mes dépenses de santé</h2>
                                                      </div>
                                                  </div>
-                                                 <div class=\"col-12 col-md-6\">
-                                                     <div class=\"row\">
-                                                         <div class=\"col\">
-                                                             <div class=\"my-4 my-md-0\">
-                                                                 <a href=\"welcome-to-cloudways\" class=\"d-block\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\">
-                                                                     <div class=\"featured-content-item  featured-content-item--inline\">
-                                                                         <div class=\"featured-content-item__image-container d-none d-md-block\">
-                                                                             <div class=\"featured-content-item__square\" style=\"visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 150, 0, 1);\" data-sr-id=\"12\">
+                                                 <div class=\"pan-body\">
+                                                     <p class=\"font-p-large text-faded mb-2\"> Accédez à un large réseau de professionnels de santé recommandés et au juste prix.
+                                                         Les prestations de santé telles que les hospitalisations, le dentaire, l’optique, les analyses biologiques, les actes de radiologie… entraînent souvent des dépenses importantes.
+                                                         Aujourd’hui tous les prestataires ne facturent pas le même prix pour les mêmes procédures médicales, certains professionnels de santé sont trois fois plus chers que d’autres !
+                                                     </p>
+                                                 </div>
+                                             </div>
 
-                                                                             </div>
-                                                                             <div class=\"featured-content-item__animation-container\">
-                                                                                 <img src=\"https://soin.cloudmeserver.info/wp-content/uploads/2021/02/lx9GoxS3HG.jpg\" class=\"featured-content-item__image\" alt=\"\">
-                                                                             </div>
-                                                                         </div>
-                                                                         <div class=\"featured-content-item__eyebrow font-mono-small font-weight-semibold mb-2\"> Some Useful Links for You to Get Started</div>
-                                                                         <h3 class=\"featured-content-item__title\">It seems like you’re running a default WordPress website. Here are a few useful links to get you started</h3>
-                                                                         <span class=\"arrow-link p-0 py-md-4\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\"> Lire la suite
+                                         </div>
+                                         <div class=\"col\">
+                                             <div class=\"\">
+                                                 <div class=\"my-4 my-md-0\">
+                                                     <a href=\"welcome-to-cloudways\" class=\"d-block\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\">
+                                                         <div class=\"featured-content-item  featured-content-item--inline\">
+                                                             <div class=\"featured-content-item__image-container d-none d-md-block\">
+                                                                 <div class=\"featured-content-item__square\" style=\"visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 150, 0, 1);\" data-sr-id=\"12\">
+
+                                                                 </div>
+                                                                 <div class=\"featured-content-item__animation-container\">
+                                                                     <img src=\"https://soin.cloudmeserver.info/wp-content/uploads/2021/02/lx9GoxS3HG.jpg\" class=\"responsive\" alt=\"\">
+                                                                 </div>
+                                                             </div>
+                                                             <div class=\"featured-content-item__eyebrow font-mono-small font-weight-semibold mb-2\"> Some Useful Links for You to Get Started</div>
+                                                             <h3 class=\"featured-content-item__title\">It seems like you’re running a default WordPress website. Here are a few useful links to get you started</h3>
+                                                             <span class=\"arrow-link p-0 py-md-4\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\"> Lire la suite
                                                                             <i class=\"fa fa-arrow-right\" ></i>
                                                                     </span>
-                                                                     </div>
-                                                                 </a>
-                                                             </div>
                                                          </div>
-                                                     </div>
+                                                     </a>
                                                  </div>
+
                                              </div>
                                          </div>
                                      </div>
@@ -479,7 +471,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 240
+    // line 232
     public function block_menu_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -497,7 +489,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 241
+    // line 233
     public function block_login_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -515,7 +507,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 243
+    // line 235
     public function block_sider_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -525,7 +517,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "sider_header"));
 
-        // line 244
+        // line 236
         echo "                        <div class=\"vlt-aside-menu-overlay\" ></div>
                         <div class=\"vlt-aside-menu-wrapper fade\" >
                             <div class=\"vlt-aside-menu\">
@@ -562,9 +554,9 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                             </div>
                             <nav class=\"vlt-aside-menu__navigation-right\" >
                                 ";
-        // line 279
+        // line 271
         $this->displayBlock('menu_espace', $context, $blocks);
-        // line 296
+        // line 288
         echo "                            </nav>
                         </div>
 
@@ -577,7 +569,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 279
+    // line 271
     public function block_menu_espace($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -587,11 +579,11 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "menu_espace"));
 
-        // line 280
+        // line 272
         echo "                                <ul id=\"menu-espaces\" class=\"sf-menu\">
                                     <li id=\"menu-item-2869\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-2869\">
                                         <a href=\"";
-        // line 282
+        // line 274
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("espace_adherant");
         echo "\">
                                             <span>Adhérent</span>
@@ -599,7 +591,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                     </li>
                                     <li id=\"menu-item-2870\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-2870\">
                                         <a href=\"";
-        // line 287
+        // line 279
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("espace_employeur");
         echo "\">
                                             <span>Employeur</span>
@@ -607,7 +599,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                     </li>
                                     <li id=\"menu-item-2871\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-2871\">
                                         <a href=\"";
-        // line 292
+        // line 284
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("espace_partenaire");
         echo "\"><span>Partenaire</span></a>
                                     </li>
@@ -621,7 +613,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 301
+    // line 293
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -631,7 +623,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 302
+        // line 294
         echo "
                         <main class=\"vlt-main\">
                             <div class=\"\" style=\"background-image: url('/img/static/dot-gray.jpg');background-position: 50% 50%;height: fit-content;padding-top:45px;\">
@@ -665,7 +657,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                                             <div class=\"carousel-item active\" data-bs-interval=\"5000\">
                                                                 <div class=\"media\">
                                                                     <img class=\"rounded-circle img-thumbnail\" src=\"";
-        // line 334
+        // line 326
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/static/default-user.png"), "html", null, true);
         echo "\" alt=\"\" width=\"75\">
                                                                     <div class=\"media-body ml-3\">
@@ -685,7 +677,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                                             <div class=\"carousel-item\" data-bs-interval=\"15000\">
                                                                 <div class=\"media\">
                                                                     <img class=\"rounded-circle img-thumbnail\" src=\"";
-        // line 351
+        // line 343
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/static/default-user.png"), "html", null, true);
         echo "\" alt=\"\" width=\"75\">
                                                                     <div class=\"media-body ml-3\">
@@ -705,7 +697,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                                             <div class=\"carousel-item\" data-bs-interval=\"10000\">
                                                                 <div class=\"media\">
                                                                     <img class=\"rounded-circle img-thumbnail\" src=\"";
-        // line 368
+        // line 360
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/static/default-user.png"), "html", null, true);
         echo "\" alt=\"\" width=\"75\">
                                                                     <div class=\"media-body ml-3\">
@@ -726,7 +718,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                                             <div class=\"carousel-item\" data-bs-interval=\"5000\">
                                                                 <div class=\"media\">
                                                                     <img class=\"rounded-circle img-thumbnail\" src=\"";
-        // line 386
+        // line 378
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/static/default-user.png"), "html", null, true);
         echo "\" alt=\"\" width=\"75\">
                                                                     <div class=\"media-body ml-3\">
@@ -747,7 +739,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                                             <div class=\"carousel-item\" data-bs-interval=\"\">
                                                                 <div class=\"media\">
                                                                     <img class=\"rounded-circle img-thumbnail\" src=\"";
-        // line 404
+        // line 396
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/img/static/default-user.png"), "html", null, true);
         echo "\" alt=\"\" width=\"75\">
                                                                     <div class=\"media-body ml-3\">
@@ -845,7 +837,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 492
+    // line 484
     public function block_footer($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -855,7 +847,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "footer"));
 
-        // line 493
+        // line 485
         echo "                    <footer class=\"vlt-footer vlt-footer--style-1\" style=\"padding: 26px 16%;\">
                         <div class=\"container\">
                             <div class=\"vlt-footer-head\">
@@ -923,7 +915,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 556
+    // line 548
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -933,17 +925,17 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 557
+        // line 549
         echo "        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>
         <!-- JavaScript Bundle with Popper -->
         <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf\" crossorigin=\"anonymous\"></script>
 
         <script src=\" ";
-        // line 561
+        // line 553
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("js/static/app.js"), "html", null, true);
         echo "\"></script>
         ";
-        // line 563
+        // line 555
         echo "        <script>
             \$(document).ready(function(){
 
@@ -1049,7 +1041,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     }
 
-    // line 660
+    // line 652
     public function block_map_javascript($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -1059,7 +1051,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "map_javascript"));
 
-        // line 661
+        // line 653
         echo "        <!-- Make sure you put this AFTER Leaflet's CSS -->
         <script src=\"https://unpkg.com/leaflet@1.7.1/dist/leaflet.js\"
                 integrity=\"sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==\"
@@ -1086,7 +1078,7 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
 
     public function getDebugInfo()
     {
-        return array (  1063 => 661,  1053 => 660,  947 => 563,  943 => 561,  937 => 557,  927 => 556,  859 => 493,  849 => 492,  751 => 404,  730 => 386,  709 => 368,  689 => 351,  669 => 334,  635 => 302,  625 => 301,  611 => 292,  603 => 287,  595 => 282,  591 => 280,  581 => 279,  568 => 296,  566 => 279,  529 => 244,  519 => 243,  501 => 241,  483 => 240,  294 => 57,  284 => 56,  271 => 50,  263 => 48,  259 => 46,  257 => 45,  251 => 42,  242 => 35,  232 => 34,  222 => 29,  212 => 28,  189 => 16,  179 => 15,  166 => 11,  156 => 10,  137 => 7,  126 => 672,  123 => 660,  121 => 556,  115 => 552,  112 => 492,  110 => 301,  107 => 300,  105 => 243,  102 => 242,  99 => 241,  97 => 240,  92 => 237,  90 => 56,  86 => 54,  84 => 34,  78 => 30,  75 => 28,  72 => 15,  69 => 10,  65 => 7,  57 => 1,);
+        return array (  1055 => 653,  1045 => 652,  939 => 555,  935 => 553,  929 => 549,  919 => 548,  851 => 485,  841 => 484,  743 => 396,  722 => 378,  701 => 360,  681 => 343,  661 => 326,  627 => 294,  617 => 293,  603 => 284,  595 => 279,  587 => 274,  583 => 272,  573 => 271,  560 => 288,  558 => 271,  521 => 236,  511 => 235,  493 => 233,  475 => 232,  294 => 57,  284 => 56,  271 => 50,  263 => 48,  259 => 46,  257 => 45,  251 => 42,  242 => 35,  232 => 34,  222 => 29,  212 => 28,  189 => 16,  179 => 15,  166 => 11,  156 => 10,  137 => 7,  126 => 664,  123 => 652,  121 => 548,  115 => 544,  112 => 484,  110 => 293,  107 => 292,  105 => 235,  102 => 234,  99 => 233,  97 => 232,  92 => 229,  90 => 56,  86 => 54,  84 => 34,  78 => 30,  75 => 28,  72 => 15,  69 => 10,  65 => 7,  57 => 1,);
     }
 
     public function getSourceContext()
@@ -1173,53 +1165,45 @@ class __TwigTemplate_ee822e1e8e7b60c106d7e66d1c80dae9983d2a01eca79b305df0e419e85
                                      <a  style=\"    padding: 25px;    margin-left: 91%;\">
                                          <i class=\"material-icons d-none d-xl-block btn-close _close-accordion\" > </i>
                                      </a>
-                                     <div class=\"col col-xl-12\">
-                                         <div class=\"container px-0 px-xl-3\">
-                                             <div class=\"row\">
-                                                 <div class=\"col-6\">
-                                                     <h2 class=\"mb-2\"> Optimiser mes dépenses de santé</h2>
-                                                 </div>
-                                                 <div class=\"col-6\">
-                                                 </div>
-                                                 <div class=\"col-12 col-md-6 col-xl-5\">
-                                                     <div class=\"row\">
-                                                         <div class=\"col-12\" data-eventaction=\"Clicked read more\" data-eventcategory=\"Navigation-Read More\" data-eventlabel=\"Category:People | title:View all people solutions \">
-                                                             <p class=\"font-p-large text-faded mb-2\"> Accédez à un large réseau de professionnels de santé recommandés et au juste prix.
-                                                                 Les prestations de santé telles que les hospitalisations, le dentaire, l’optique, les analyses biologiques, les actes de radiologie… entraînent souvent des dépenses importantes.
-                                                                 Aujourd’hui tous les prestataires ne facturent pas le même prix pour les mêmes procédures médicales, certains professionnels de santé sont trois fois plus chers que d’autres !
-                                                             </p>
-                                                             <a href=\"/services-soin-clair\" class=\"arrow-link p-0 py-md-4\" data-eventaction=\"Clicked read more\" data-eventcategory=\"Navigation-Read More\" data-eventlabel=\"Category:People | title:View all people solutions \"> Nos Services
-                                                                 <i class=\"fa fa-arrow-right\" ></i>
-                                                             </a>
-                                                             <hr class=\"my-4 mb-md-3\">
-                                                         </div>
+                                     <div class=\"row\" style=\"overflow-y: scroll\">
+                                         <div class=\"col\">
+                                             <div class=\"pan-article\">
+                                                 <div class=\"pan-header\">
+                                                     <div class=\"pan-header-label\">
+                                                          <h2 class=\"mb-2\"> Optimiser mes dépenses de santé</h2>
                                                      </div>
                                                  </div>
-                                                 <div class=\"col-12 col-md-6\">
-                                                     <div class=\"row\">
-                                                         <div class=\"col\">
-                                                             <div class=\"my-4 my-md-0\">
-                                                                 <a href=\"welcome-to-cloudways\" class=\"d-block\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\">
-                                                                     <div class=\"featured-content-item  featured-content-item--inline\">
-                                                                         <div class=\"featured-content-item__image-container d-none d-md-block\">
-                                                                             <div class=\"featured-content-item__square\" style=\"visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 150, 0, 1);\" data-sr-id=\"12\">
+                                                 <div class=\"pan-body\">
+                                                     <p class=\"font-p-large text-faded mb-2\"> Accédez à un large réseau de professionnels de santé recommandés et au juste prix.
+                                                         Les prestations de santé telles que les hospitalisations, le dentaire, l’optique, les analyses biologiques, les actes de radiologie… entraînent souvent des dépenses importantes.
+                                                         Aujourd’hui tous les prestataires ne facturent pas le même prix pour les mêmes procédures médicales, certains professionnels de santé sont trois fois plus chers que d’autres !
+                                                     </p>
+                                                 </div>
+                                             </div>
 
-                                                                             </div>
-                                                                             <div class=\"featured-content-item__animation-container\">
-                                                                                 <img src=\"https://soin.cloudmeserver.info/wp-content/uploads/2021/02/lx9GoxS3HG.jpg\" class=\"featured-content-item__image\" alt=\"\">
-                                                                             </div>
-                                                                         </div>
-                                                                         <div class=\"featured-content-item__eyebrow font-mono-small font-weight-semibold mb-2\"> Some Useful Links for You to Get Started</div>
-                                                                         <h3 class=\"featured-content-item__title\">It seems like you’re running a default WordPress website. Here are a few useful links to get you started</h3>
-                                                                         <span class=\"arrow-link p-0 py-md-4\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\"> Lire la suite
+                                         </div>
+                                         <div class=\"col\">
+                                             <div class=\"\">
+                                                 <div class=\"my-4 my-md-0\">
+                                                     <a href=\"welcome-to-cloudways\" class=\"d-block\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\">
+                                                         <div class=\"featured-content-item  featured-content-item--inline\">
+                                                             <div class=\"featured-content-item__image-container d-none d-md-block\">
+                                                                 <div class=\"featured-content-item__square\" style=\"visibility: visible; opacity: 0; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 150, 0, 1);\" data-sr-id=\"12\">
+
+                                                                 </div>
+                                                                 <div class=\"featured-content-item__animation-container\">
+                                                                     <img src=\"https://soin.cloudmeserver.info/wp-content/uploads/2021/02/lx9GoxS3HG.jpg\" class=\"responsive\" alt=\"\">
+                                                                 </div>
+                                                             </div>
+                                                             <div class=\"featured-content-item__eyebrow font-mono-small font-weight-semibold mb-2\"> Some Useful Links for You to Get Started</div>
+                                                             <h3 class=\"featured-content-item__title\">It seems like you’re running a default WordPress website. Here are a few useful links to get you started</h3>
+                                                             <span class=\"arrow-link p-0 py-md-4\" data-eventaction=\"Featured Content Card Clicked\" data-eventcategory=\"Navigation - Content Card (single)\" data-eventlabel=\"Category:Preparing for a post-pandemic world: Transforming human capital and benefit actions | title:Read more\"> Lire la suite
                                                                             <i class=\"fa fa-arrow-right\" ></i>
                                                                     </span>
-                                                                     </div>
-                                                                 </a>
-                                                             </div>
                                                          </div>
-                                                     </div>
+                                                     </a>
                                                  </div>
+
                                              </div>
                                          </div>
                                      </div>

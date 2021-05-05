@@ -1,0 +1,39 @@
+{{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+
+<div class="item form-group">
+    {{ form_label(form.title, 'Titre',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6 has-feedback">
+        {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <small>{{ form_help(form.title) }}</small>
+</div>
+
+<div class="item form-group">
+    {{ form_label(form.message, 'Votre message içi',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6 has-feedback">
+        {{ form_widget(form.message, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <small>{{ form_help(form.message) }}</small>
+</div>
+
+
+<div class="item form-group">
+    {{ form_label(form.fichierjoint, 'Devis',{label_attr: {class: 'col-form-label col-md-3 col-sm-3 label-align'}} ) }}
+    <div class="col-md-6 col-sm-6  form-group">
+        {{ form_widget(form.fichierjoint, {'attr': {'class': 'file'}}) }}
+    </div>
+    <small>{{ form_help(form.fichierjoint) }}</small>
+</div>
+
+<div class="item form-group">
+    <div class="col-md-6 col-sm-6 offset-md-3">
+        <button class="btn btn-primary" type="reset">Reset</button>
+        <button class="btn btn-success">{{ button_label|default('Submit') }}</button>
+    </div>
+</div>
+
+
+{{ form_end(form) }}

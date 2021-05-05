@@ -35,7 +35,7 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/services-soin-clair", name="services_soinclair", methods={"GET","HEAD"})
+         * @Route("/services-soin-clair", name="services_soinclair", methods={"GET","HEAD"})
      */
     public function services(): Response
     {
@@ -50,6 +50,14 @@ class HomeController extends AbstractController
     {
         return $this->render('security/reset-password.html.twig');
     }
+    /**
+     * @Route("/analyse-devis", name="analysedevis_page", methods={"GET","HEAD"})
+     */
+    public function analysedevis(): Response
+    {
+        return $this->redirect('demande_new');
+    }
+
 
     /**
      * @Route("/admin", name="admin_page", methods={"GET","HEAD"})
@@ -57,10 +65,10 @@ class HomeController extends AbstractController
     public function admin(): Response
     {
         if ($this->getUser()) {
-            return $this->render('admin/security/login.html.twig', []);
+            return $this->render('admin/index.html.twig');
         }
 
-        return $this->render('admin/index.html.twig');
+        return $this->render('admin/security/login.html.twig', []);
     }
 
     /**

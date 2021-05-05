@@ -1,0 +1,150 @@
+
+
+
+
+{% extends 'base.html.twig' %}
+
+    {% block map_javascript %}
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+                crossorigin="*"></script>
+        <script type="text/javascript">
+
+            var mymap = L.map('mapid').setView([33.575784, -7.619042], 13);
+
+
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: 'Map Soin Clair',
+                maxZoom: 18,
+                zoom: 9,
+                id: 'mapbox/streets-v11',
+                tileSize: 512,
+                zoomOffset: -1,
+                accessToken: 'pk.eyJ1IjoiemNoYXJpayIsImEiOiJja28xaWU4NHQwOHNzMndscDc0Y3pyZWZyIn0.PzH6CE-rjK-HYPbdVdDKAA'
+            }).addTo(mymap);
+
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'}).addTo(mymap);
+
+            var myMarker = L.marker([33.575784, -7.619042], {title: "Coordinates", alt: "Coordinates", draggable: true}).addTo(mymap).on('dragend', function() {
+                var lat = myMarker.getLatLng().lat.toFixed(8);
+                var lon = myMarker.getLatLng().lng.toFixed(8);
+                var czoom = map.getZoom();
+                if(czoom < 18) { nzoom = czoom + 2; }
+                if(nzoom > 18) { nzoom = 18; }
+                if(czoom != 18) { map.setView([lat,lon], nzoom); } else { map.setView([lat,lon]); }
+                document.getElementById('lat').value = lat;
+                document.getElementById('lon').value = lon;
+                myMarker.bindPopup("Lat " + lat + "<br />Lon " + lon).openPopup();
+            });
+
+            function chooseAddr(lat1, lng1)
+            {
+                myMarker.closePopup();
+                mymap.setView([lat1, lng1],18);
+                myMarker.setLatLng([lat1, lng1]);
+                lat = lat1.toFixed(8);
+                lon = lng1.toFixed(8);
+                document.getElementById('lat').value = lat;
+                document.getElementById('lon').value = lon;
+                //myMarker.bindPopup("Type " + obj).openPopup();
+            }
+
+            function myFunction(arr)
+            {
+                console.log(arr);
+                var out = "";
+                var i;
+                if(arr.length > 0)
+                {
+                    for(i = 0; i < arr.length; i++)
+                    {
+                        var adress = document.getElementById("addr").value;
+                        var suiteInp = document.getElementById('specialite');
+                        var specialite = suiteInp.options[suiteInp.selectedIndex].text;
+
+                        var name = arr[i].display_name.split(',')[0];
+                        var headerStr ="<div class='card-header'>"+ name+"</div><div class='card-body'>";
+                        var startStr = "<div class='address card' title='Show Location and Coordinates' onclick='chooseAddr(" + arr[i].lat + ", " + arr[i].lon + ");return false;'>" + headerStr + "<img class='doc-icon' src='/img/static/medicine.png' width='100' height='100'/> <h5>"+specialite+" - à " + adress+" </h5><br /> <a>";
+                        var endStr = "</a></div></div>";
+                        out += startStr + arr[i].display_name + endStr;
+                    }
+                    document.getElementById('results').innerHTML = out;
+                }
+                else
+                {
+                    document.getElementById('results').innerHTML = "Sorry, no results...";
+                }
+
+            }
+            function addr_search()
+            {
+                var inp = document.getElementById("addr");
+                var suiteInp = document.getElementById('specialite');
+                var strUser = suiteInp.options[suiteInp.selectedIndex].text;
+
+                var xmlhttp = new XMLHttpRequest();
+                var url = "https://nominatim.openstreetmap.org/search?format=json&limit=30&q=" + strUser +", "+ inp.value;
+                xmlhttp.onreadystatechange = function()
+                {
+                    if (this.readyState == 4 && this.status == 200)
+                    {
+                        var myArr = JSON.parse(this.responseText);
+                        myFunction(myArr);
+                    }
+                };
+                xmlhttp.open("GET", url, true);
+                xmlhttp.send();
+            }
+
+        </script>
+
+    {% endblock %}
+
+{% block title %}Espace Adhérent{% endblock %}
+{%   set adherant = app.user.adherants[0] %}
+
+
+{% block menu_espace %}
+    <ul id="menu-espaces" class="sf-menu" xmlns:https="http://www.w3.org/1999/xhtml"
+        xmlns:https="http://www.w3.org/1999/xhtml" xmlns:https="http://www.w3.org/1999/xhtml">
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_profil') }}"  class="btn btn-default">
+                Mon profil
+            </a>
+        </li>
+
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_show', {'id': adherant.id }) }}"  class="btn btn-default">
+                Analyse de devis
+            </a>
+        </li>
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_show', {'id': adherant.id }) }}"  class="btn btn-default">
+                Médecins
+            </a>
+        </li>
+
+        <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
+            <a href="{{ path('adherant_show', {'id': adherant.id }) }}"  class="btn btn-default">
+                F.A.Q
+            </a>
+        </li>
+        <li id="menu-item-2871" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2871">
+            <a href="{{ path('app_logout') }}"><span>Logout</span></a>
+        </li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="container-fluuid _content-background">
+        <div class="row">
+            <div class="col-12 _content-header">
+                <h3>Bienvenue dans votre espace adhérent !</h3>
+            </div>
+        </div>
+    </div>
+
+s    {{ include('demande/index.html.twig') }}
+
+{% endblock %}
+{% block body %}{% endblock %}

@@ -16,6 +16,7 @@ parameters:
     #Partenaire parameters
     upload_tarifs_partenaire: '%kernel.project_dir%/public/uploads/partenaire/tarifs'
     upload_prestataire_partenaire: '%kernel.project_dir%/public/uploads/partenaire/tarifs'
+    upload_demande_directory: '%kernel.project_dir%/public/uploads/adherants_demande/'
 services:
     redirect.after.login:
         class: App\Service\AfterLoginRedirection

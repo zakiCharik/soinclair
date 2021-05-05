@@ -203,17 +203,24 @@ class __TwigTemplate_b82ade202dbc056e2d6e630b19823633cb2b9818a484c6da6061b5aa0c3
         echo "</td>
                     </tr>
                     <tr>
+                        <th width=\"40%\">Téléphone Fix</th>
+                        <td width=\"60%\">";
+        // line 78
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["partenaire"]) || array_key_exists("partenaire", $context) ? $context["partenaire"] : (function () { throw new RuntimeError('Variable "partenaire" does not exist.', 78, $this->source); })()), "phonefix", [], "any", false, false, false, 78), "html", null, true);
+        echo "</td>
+                    </tr>
+                    <tr>
                         <th>Liste des Tarifs</th>
                         <td><a href=\"/uploads/partenaire/tarifs/";
-        // line 78
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["partenaire"]) || array_key_exists("partenaire", $context) ? $context["partenaire"] : (function () { throw new RuntimeError('Variable "partenaire" does not exist.', 78, $this->source); })()), "logo", [], "any", false, false, false, 78), "html", null, true);
+        // line 82
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["partenaire"]) || array_key_exists("partenaire", $context) ? $context["partenaire"] : (function () { throw new RuntimeError('Variable "partenaire" does not exist.', 82, $this->source); })()), "logo", [], "any", false, false, false, 82), "html", null, true);
         echo "\"><i class=\"fa fa-download\"></i> Download fichier</a></td>
                     </tr>
                     <tr>
                         <th width=\"40%\">Profil description</th>
                         <td width=\"60%\">";
-        // line 82
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["partenaire"]) || array_key_exists("partenaire", $context) ? $context["partenaire"] : (function () { throw new RuntimeError('Variable "partenaire" does not exist.', 82, $this->source); })()), "descriptionprofil", [], "any", false, false, false, 82), "html", null, true);
+        // line 86
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["partenaire"]) || array_key_exists("partenaire", $context) ? $context["partenaire"] : (function () { throw new RuntimeError('Variable "partenaire" does not exist.', 86, $this->source); })()), "descriptionprofil", [], "any", false, false, false, 86), "html", null, true);
         echo "</td>
                     </tr>
 
@@ -244,7 +251,7 @@ class __TwigTemplate_b82ade202dbc056e2d6e630b19823633cb2b9818a484c6da6061b5aa0c3
 
     }
 
-    // line 104
+    // line 108
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -274,7 +281,7 @@ class __TwigTemplate_b82ade202dbc056e2d6e630b19823633cb2b9818a484c6da6061b5aa0c3
 
     public function getDebugInfo()
     {
-        return array (  248 => 104,  216 => 82,  209 => 78,  202 => 74,  195 => 70,  187 => 65,  179 => 60,  161 => 45,  147 => 33,  137 => 32,  123 => 27,  115 => 22,  106 => 16,  97 => 10,  93 => 8,  83 => 7,  64 => 3,  53 => 1,  51 => 4,  38 => 1,);
+        return array (  255 => 108,  223 => 86,  216 => 82,  209 => 78,  202 => 74,  195 => 70,  187 => 65,  179 => 60,  161 => 45,  147 => 33,  137 => 32,  123 => 27,  115 => 22,  106 => 16,  97 => 10,  93 => 8,  83 => 7,  64 => 3,  53 => 1,  51 => 4,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -353,6 +360,10 @@ class __TwigTemplate_b82ade202dbc056e2d6e630b19823633cb2b9818a484c6da6061b5aa0c3
                     <tr>
                         <th width=\"40%\">Adresse</th>
                         <td width=\"60%\">{{ partenaire.adresse }}</td>
+                    </tr>
+                    <tr>
+                        <th width=\"40%\">Téléphone Fix</th>
+                        <td width=\"60%\">{{ partenaire.phonefix }}</td>
                     </tr>
                     <tr>
                         <th>Liste des Tarifs</th>

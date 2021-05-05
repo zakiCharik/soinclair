@@ -218,7 +218,7 @@ class __TwigTemplate_4e6ff148dfc4a29592d12cfe23aae541df87767765773f6a4b0457795fa
         <li id=\"menu-item-2869\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-2869\">
             <a href=\"";
         // line 114
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("adherant_show", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 114, $this->source); })()), "id", [], "any", false, false, false, 114)]), "html", null, true);
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("demande_new");
         echo "\"  class=\"btn btn-default\">
                 Analyse de devis
             </a>
@@ -282,42 +282,61 @@ class __TwigTemplate_4e6ff148dfc4a29592d12cfe23aae541df87767765773f6a4b0457795fa
         </div>
     </div>
 
+
     <div class=\"container-fluuid\">
         <div class=\"row\">
             <div class=\"col-12 wpb_wrapper p-xl-5\">
-                <table class=\"table no-border\">
-
-                    <tr>
-                        <th width=\"40%\">Nom</th>
-                        <td>";
+                <div class=\"row\">
+                    <div class=\"col-lg-2 col-md-2\">
+                        <span>
+                            <img class=\"doc-icon\" src=\"/uploads/cartesoinclair/";
         // line 155
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 155, $this->source); })()), "lastname", [], "any", false, false, false, 155), "html", null, true);
-        echo "</td>
-                    </tr>
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 155, $this->source); })()), "cartesoinclair", [], "any", false, false, false, 155), "html", null, true);
+        echo "\" width=\"250\">
+                        </span>
+                    </div>
+                    <div class=\"p-4 col-lg-5 col-md-5\">
+                        <table class=\"table no-border\">
 
-                    <tr>
-                        <th width=\"40%\">Prénom</th>
-                        <td width=\"60%\">";
-        // line 160
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 160, $this->source); })()), "firstname", [], "any", false, false, false, 160), "html", null, true);
+                            <tbody><tr>
+                                <th width=\"40%\">Nom</th>
+                                <td>";
+        // line 163
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 163, $this->source); })()), "lastname", [], "any", false, false, false, 163), "html", null, true);
         echo "</td>
-                    </tr>
-                    <tr>
-                        <th width=\"40%\">N° Carte Soin Clare</th>
-                        <td width=\"60%\">";
-        // line 164
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 164, $this->source); })()), "numerosoinclair", [], "any", false, false, false, 164), "html", null, true);
-        echo "</td>
-                    </tr>
-                    <tr>
-                        <th width=\"40%\">Carte Soin Clair</th>
-                        <td width=\"60%\"><img class=\"rounded\" src=\"/uploads/cartesoinclair/";
+                            </tr>
+
+                            <tr>
+                                <th width=\"40%\">Prénom</th>
+                                <td width=\"60%\">";
         // line 168
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 168, $this->source); })()), "cartesoinclair", [], "any", false, false, false, 168), "html", null, true);
-        echo "\" width=\"50\"></td>
-                    </tr>
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 168, $this->source); })()), "firstname", [], "any", false, false, false, 168), "html", null, true);
+        echo "</td>
+                            </tr>
+                            <tr>
+                                <th width=\"40%\">N° Carte Soin Clare</th>
+                                <td width=\"60%\">";
+        // line 172
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["adherant"]) || array_key_exists("adherant", $context) ? $context["adherant"] : (function () { throw new RuntimeError('Variable "adherant" does not exist.', 172, $this->source); })()), "numerosoinclair", [], "any", false, false, false, 172), "html", null, true);
+        echo "</td>
+                            </tr>
 
-                </table>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class=\" col-lg-5 col-md-5 justify-content-center d-flex align-items-center\">
+                            <span style=\"margin:5px;\">
+                                <a href=\"\" class=\"btn btn-primary\">Modifier votre profile</a>
+                            </span>
+                        <span style=\"margin:5px;\">
+                                <a href=\"\" class=\"btn btn-success\">Réinitialisé votre mot de passe</a>
+                            </span>
+                        <span style=\"margin:5px;\">
+                                <a href=\"\" class=\"btn btn-warning\">Modifier votre profile</a>
+                            </span>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -516,7 +535,7 @@ class __TwigTemplate_4e6ff148dfc4a29592d12cfe23aae541df87767765773f6a4b0457795fa
 
     }
 
-    // line 362
+    // line 381
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -546,7 +565,7 @@ class __TwigTemplate_4e6ff148dfc4a29592d12cfe23aae541df87767765773f6a4b0457795fa
 
     public function getDebugInfo()
     {
-        return array (  520 => 362,  316 => 168,  309 => 164,  302 => 160,  294 => 155,  276 => 140,  270 => 136,  260 => 135,  246 => 130,  238 => 125,  229 => 119,  221 => 114,  212 => 108,  207 => 105,  197 => 104,  178 => 100,  75 => 4,  65 => 3,  54 => 1,  52 => 101,  39 => 1,);
+        return array (  539 => 381,  320 => 172,  313 => 168,  305 => 163,  294 => 155,  276 => 140,  270 => 136,  260 => 135,  246 => 130,  238 => 125,  229 => 119,  221 => 114,  212 => 108,  207 => 105,  197 => 104,  178 => 100,  75 => 4,  65 => 3,  54 => 1,  52 => 101,  39 => 1,);
     }
 
     public function getSourceContext()
@@ -664,7 +683,7 @@ class __TwigTemplate_4e6ff148dfc4a29592d12cfe23aae541df87767765773f6a4b0457795fa
         </li>
 
         <li id=\"menu-item-2869\" class=\"menu-item menu-item-type-custom menu-item-object-custom menu-item-2869\">
-            <a href=\"{{ path('adherant_show', {'id': adherant.id }) }}\"  class=\"btn btn-default\">
+            <a href=\"{{ path('demande_new') }}\"  class=\"btn btn-default\">
                 Analyse de devis
             </a>
         </li>
@@ -698,30 +717,49 @@ class __TwigTemplate_4e6ff148dfc4a29592d12cfe23aae541df87767765773f6a4b0457795fa
         </div>
     </div>
 
+
     <div class=\"container-fluuid\">
         <div class=\"row\">
             <div class=\"col-12 wpb_wrapper p-xl-5\">
-                <table class=\"table no-border\">
+                <div class=\"row\">
+                    <div class=\"col-lg-2 col-md-2\">
+                        <span>
+                            <img class=\"doc-icon\" src=\"/uploads/cartesoinclair/{{  adherant.cartesoinclair }}\" width=\"250\">
+                        </span>
+                    </div>
+                    <div class=\"p-4 col-lg-5 col-md-5\">
+                        <table class=\"table no-border\">
 
-                    <tr>
-                        <th width=\"40%\">Nom</th>
-                        <td>{{ adherant.lastname }}</td>
-                    </tr>
+                            <tbody><tr>
+                                <th width=\"40%\">Nom</th>
+                                <td>{{ adherant.lastname }}</td>
+                            </tr>
 
-                    <tr>
-                        <th width=\"40%\">Prénom</th>
-                        <td width=\"60%\">{{ adherant.firstname }}</td>
-                    </tr>
-                    <tr>
-                        <th width=\"40%\">N° Carte Soin Clare</th>
-                        <td width=\"60%\">{{ adherant.numerosoinclair }}</td>
-                    </tr>
-                    <tr>
-                        <th width=\"40%\">Carte Soin Clair</th>
-                        <td width=\"60%\"><img class=\"rounded\" src=\"/uploads/cartesoinclair/{{  adherant.cartesoinclair }}\" width=\"50\"></td>
-                    </tr>
+                            <tr>
+                                <th width=\"40%\">Prénom</th>
+                                <td width=\"60%\">{{ adherant.firstname }}</td>
+                            </tr>
+                            <tr>
+                                <th width=\"40%\">N° Carte Soin Clare</th>
+                                <td width=\"60%\">{{ adherant.numerosoinclair }}</td>
+                            </tr>
 
-                </table>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class=\" col-lg-5 col-md-5 justify-content-center d-flex align-items-center\">
+                            <span style=\"margin:5px;\">
+                                <a href=\"\" class=\"btn btn-primary\">Modifier votre profile</a>
+                            </span>
+                        <span style=\"margin:5px;\">
+                                <a href=\"\" class=\"btn btn-success\">Réinitialisé votre mot de passe</a>
+                            </span>
+                        <span style=\"margin:5px;\">
+                                <a href=\"\" class=\"btn btn-warning\">Modifier votre profile</a>
+                            </span>
+                    </div>
+                </div>
 
             </div>
         </div>

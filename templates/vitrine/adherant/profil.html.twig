@@ -111,7 +111,7 @@
         </li>
 
         <li id="menu-item-2869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2869">
-            <a href="{{ path('adherant_show', {'id': adherant.id }) }}"  class="btn btn-default">
+            <a href="{{ path('demande_new') }}"  class="btn btn-default">
                 Analyse de devis
             </a>
         </li>
@@ -145,30 +145,49 @@
         </div>
     </div>
 
+
     <div class="container-fluuid">
         <div class="row">
             <div class="col-12 wpb_wrapper p-xl-5">
-                <table class="table no-border">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <span>
+                            <img class="doc-icon" src="/uploads/cartesoinclair/{{  adherant.cartesoinclair }}" width="250">
+                        </span>
+                    </div>
+                    <div class="p-4 col-lg-5 col-md-5">
+                        <table class="table no-border">
 
-                    <tr>
-                        <th width="40%">Nom</th>
-                        <td>{{ adherant.lastname }}</td>
-                    </tr>
+                            <tbody><tr>
+                                <th width="40%">Nom</th>
+                                <td>{{ adherant.lastname }}</td>
+                            </tr>
 
-                    <tr>
-                        <th width="40%">Prénom</th>
-                        <td width="60%">{{ adherant.firstname }}</td>
-                    </tr>
-                    <tr>
-                        <th width="40%">N° Carte Soin Clare</th>
-                        <td width="60%">{{ adherant.numerosoinclair }}</td>
-                    </tr>
-                    <tr>
-                        <th width="40%">Carte Soin Clair</th>
-                        <td width="60%"><img class="rounded" src="/uploads/cartesoinclair/{{  adherant.cartesoinclair }}" width="50"></td>
-                    </tr>
+                            <tr>
+                                <th width="40%">Prénom</th>
+                                <td width="60%">{{ adherant.firstname }}</td>
+                            </tr>
+                            <tr>
+                                <th width="40%">N° Carte Soin Clare</th>
+                                <td width="60%">{{ adherant.numerosoinclair }}</td>
+                            </tr>
 
-                </table>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class=" col-lg-5 col-md-5 justify-content-center d-flex align-items-center">
+                            <span style="margin:5px;">
+                                <a href="" class="btn btn-primary">Modifier votre profile</a>
+                            </span>
+                        <span style="margin:5px;">
+                                <a href="" class="btn btn-success">Réinitialisé votre mot de passe</a>
+                            </span>
+                        <span style="margin:5px;">
+                                <a href="" class="btn btn-warning">Modifier votre profile</a>
+                            </span>
+                    </div>
+                </div>
 
             </div>
         </div>

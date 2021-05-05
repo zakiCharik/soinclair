@@ -19,6 +19,8 @@ return [
         '/admin/adherant/new' => [[['_route' => 'adherant_new', '_controller' => 'App\\Controller\\AdherantController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/adherant/upload-excel' => [[['_route' => 'upload-excel', '_controller' => 'App\\Controller\\AdherantController::xslx'], null, null, null, false, false, null]],
         '/admin/adherant/upload-zip' => [[['_route' => 'upload-zip', '_controller' => 'App\\Controller\\AdherantController::uploadZip'], null, null, null, false, false, null]],
+        '/demande' => [[['_route' => 'demande_index', '_controller' => 'App\\Controller\\DemandeController::index'], null, ['GET' => 0], null, true, false, null]],
+        '/demande/new' => [[['_route' => 'demande_new', '_controller' => 'App\\Controller\\DemandeController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/employeur' => [[['_route' => 'employeur_index', '_controller' => 'App\\Controller\\EmployeurController::index'], null, ['GET' => 0], null, true, false, null]],
         '/admin/employeur/new' => [[['_route' => 'employeur_new', '_controller' => 'App\\Controller\\EmployeurController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'home_page', '_controller' => 'App\\Controller\\HomeController::home'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
@@ -26,6 +28,7 @@ return [
         '/nos-publications' => [[['_route' => 'nos_publications', '_controller' => 'App\\Controller\\HomeController::publications'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
         '/services-soin-clair' => [[['_route' => 'services_soinclair', '_controller' => 'App\\Controller\\HomeController::services'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
         '/resetpwd' => [[['_route' => 'resetpwd_soinclair', '_controller' => 'App\\Controller\\HomeController::resetpwd'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
+        '/analyse-devis' => [[['_route' => 'analysedevis_page', '_controller' => 'App\\Controller\\HomeController::analysedevis'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
         '/admin' => [[['_route' => 'admin_page', '_controller' => 'App\\Controller\\HomeController::admin'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
         '/espace-adherant' => [[['_route' => 'espace_adherant', '_controller' => 'App\\Controller\\HomeController::adherant'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
         '/espace-adherant/profil' => [[['_route' => 'adherant_profil', '_controller' => 'App\\Controller\\HomeController::adherant_profil'], null, ['GET' => 0, 'HEAD' => 1], null, false, false, null]],
@@ -84,6 +87,11 @@ return [
                         .'|(*:425)'
                     .')'
                 .')'
+                .'|/demande/([^/]++)(?'
+                    .'|(*:455)'
+                    .'|/edit(*:468)'
+                    .'|(*:476)'
+                .')'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -108,8 +116,11 @@ return [
         379 => [[['_route' => 'service_delete', '_controller' => 'App\\Controller\\ServiceController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
         404 => [[['_route' => 'user_show', '_controller' => 'App\\Controller\\UserController::show'], ['id'], ['GET' => 0], null, false, true, null]],
         417 => [[['_route' => 'user_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        425 => [
-            [['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
+        425 => [[['_route' => 'user_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        455 => [[['_route' => 'demande_show', '_controller' => 'App\\Controller\\DemandeController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        468 => [[['_route' => 'demande_edit', '_controller' => 'App\\Controller\\DemandeController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        476 => [
+            [['_route' => 'demande_delete', '_controller' => 'App\\Controller\\DemandeController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).''.\DIRECTORY_SEPARATOR.'vendor/autoload.php';
-require __DIR__.'/ContainerJkKxQSK/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerKWjlxQ4/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -33,6 +33,7 @@ $classes[] = 'Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerName
 $classes[] = 'Symfony\Component\HttpFoundation\RequestMatcher';
 $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\AdherantController';
+$classes[] = 'App\Controller\DemandeController';
 $classes[] = 'App\Controller\EmployeurController';
 $classes[] = 'App\Controller\HomeController';
 $classes[] = 'App\Controller\PartenaireController';
@@ -40,11 +41,13 @@ $classes[] = 'App\Controller\SecurityController';
 $classes[] = 'App\Controller\ServiceController';
 $classes[] = 'App\Controller\UserController';
 $classes[] = 'App\Form\AdherantType';
+$classes[] = 'App\Form\DemandeType';
 $classes[] = 'App\Form\EmployeurType';
 $classes[] = 'App\Form\PartenaireType';
 $classes[] = 'App\Form\ServiceType';
 $classes[] = 'App\Form\UserType';
 $classes[] = 'App\Repository\AdherantRepository';
+$classes[] = 'App\Repository\DemandeRepository';
 $classes[] = 'App\Repository\EmployeurRepository';
 $classes[] = 'App\Repository\PartenaireRepository';
 $classes[] = 'App\Repository\ServiceRepository';

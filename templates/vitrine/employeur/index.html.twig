@@ -33,47 +33,80 @@
         </div>
     </div>
 
+    <div class="container-fluuid ">
+        <div class="_formulaire_map" style="margin-bottom: 22px;">
+            <div class="row" style="padding-bottom: 25px;padding-left: 10%;padding-right: 10%;padding-top: 25px;background-color: #00a8cdc2; color: #fff;">
+                <div class="col-12">
+                    <h3>Bienvenue {{ employeur.entreprise }} !</h3>
+                    <small>Vos coordonnées personnelles</small>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div class="container-fluuid">
         <div class="row">
-            <div class="col-12 wpb_wrapper">
-                <div>LOGO</div>
-                <div>Carte Soin clair - Durée de Validité</div>
+            <div class="col-12 row wpb_wrapper p-xl-5">
+                <div class="col-lg-3 col-md-3">
+                    <span>
+                        <img class="doc-icon" src="/uploads/employeur/logos/{{  employeur.logo }}" width="250">
+                    </span>
+                </div>
+                <div class="col-lg-5 col-md-5">
+                    <p>Carte Soin clair - Durée de Validité</p>
+                    <table class="table no-border">
+                        <tr>
+                            <th>Inscription date</th>
+                            <td>
+                                <span> {{  employeur.subscriptiondate | date }}</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th>Expiration date</th>
+                            <td>
+                                <span> {{  employeur.expiringdate | date }}</span>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
 
         <div class="row">
-            <div class="col-12 wpb_wrapper">
-                <div>Effectif de personnel actualisé</div>
+            <div class="col-6  wpb_wrapper p-xl-5">
+                <h3>Effectif de personnel actualisé</h3>
+                <span>NaN</span>
             </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 wpb_wrapper">
+            <div class="col-6  wpb_wrapper p-xl-5">
                 <h4>Documents</h4>
-                <div>Effectif de personnel actualisé</div>
+                <table class="table no-border">
+                    <tr>
+                        <th>DB du personnel</th>
+                        <td>
+                            <a href="/uploads/employeur/fichiers_employeur/{{  employeur.databaseemployees }}"><i class="fa fa-download"></i>  </a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Contrat d'assurance</th>
+                        <td>
+                            <a href="/uploads/employeur/contrat_assurance/{{  employeur.assurancecontract }}"><i class="fa fa-download"></i>  </a>
+
+                        </td>
+                    </tr>
+                </table>
             </div>
+
+        </div>
+
+        <div class="row">
         </div>
     </div>
     <div class="container-fluuid">
         <div class="row">
-            <div class="col-12 wpb_wrapper">
-            </div>
-        </div>
-    </div>
-
-    <div class="container-fluuid _content-background">
-        <div class="row">
-            <div class="col-12 _content-header">
-                <h4>
-                    Faites analyser votre devis par des professionnels!<br/>
-                    Envoyez vos questions et votre devis par
-                    <a href="mailto:Contact@soinclair.ma">mail</a> ou sur
-                    <a href="https://api.whatsapp.com/send?phone=212662790345" target="_blank" style="color:#2db742 !important;">Whatsapp</a>
-                </h4>
-                <small>
-                    Besoin d’aide ?
-                    <br/>Contactez nous sur 06 66 24 87 72 ou par mail Contact@soinclair.ma
-                </small>
+            <div class="col-12  wpb_wrapper p-xl-5">
             </div>
         </div>
     </div>

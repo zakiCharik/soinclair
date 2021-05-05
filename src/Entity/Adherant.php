@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\AdherantRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -137,6 +139,16 @@ class Adherant
      * @ORM\Column(type="date", nullable=true)
      */
     private $expiring_date;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Demande::class, mappedBy="adherent", orphanRemoval=true)
+     */
+    private $demandes;
+
+    public function __construct()
+    {
+        $this->demandes = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -424,6 +436,36 @@ class Adherant
     public function setExpiringDate(?\DateTimeInterface $expiring_date): self
     {
         $this->expiring_date = $expiring_date;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Demande[]
+     */
+    public function getDemandes(): Collection
+    {
+        return $this->demandes;
+    }
+
+    public function addDemande(Demande $demande): self
+    {
+        if (!$this->demandes->contains($demande)) {
+            $this->demandes[] = $demande;
+            $demande->setAdherent($this);
+        }
+
+        return $this;
+    }
+
+    public function removeDemande(Demande $demande): self
+    {
+        if ($this->demandes->removeElement($demande)) {
+            // set the owning side to null (unless already changed)
+            if ($demande->getAdherent() === $this) {
+                $demande->setAdherent(null);
+            }
+        }
 
         return $this;
     }

@@ -80,6 +80,7 @@
     <parameter key="upload_contratassurance_employeur">C:\Users\czakaria\lab\projects\soinclair\soin_clair/public/uploads/employeur/contrat_assurance</parameter>
     <parameter key="upload_tarifs_partenaire">C:\Users\czakaria\lab\projects\soinclair\soin_clair/public/uploads/partenaire/tarifs</parameter>
     <parameter key="upload_prestataire_partenaire">C:\Users\czakaria\lab\projects\soinclair\soin_clair/public/uploads/partenaire/tarifs</parameter>
+    <parameter key="upload_demande_directory">C:\Users\czakaria\lab\projects\soinclair\soin_clair/public/uploads/adherants_demande/</parameter>
     <parameter key="event_dispatcher.event_aliases" type="collection">
       <parameter key="Symfony\Component\Console\Event\ConsoleCommandEvent">console.command</parameter>
       <parameter key="Symfony\Component\Console\Event\ConsoleErrorEvent">console.error</parameter>
@@ -357,6 +358,13 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\AdherantController"/>
       </call>
     </service>
+    <service id="App\Controller\DemandeController" class="App\Controller\DemandeController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\DemandeController"/>
+      </call>
+    </service>
     <service id="App\Controller\EmployeurController" class="App\Controller\EmployeurController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -402,6 +410,9 @@
     <service id="App\Form\AdherantType" class="App\Form\AdherantType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
+    <service id="App\Form\DemandeType" class="App\Form\DemandeType" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
     <service id="App\Form\EmployeurType" class="App\Form\EmployeurType" autowire="true" autoconfigure="true">
       <tag name="form.type"/>
     </service>
@@ -415,6 +426,10 @@
       <tag name="form.type"/>
     </service>
     <service id="App\Repository\AdherantRepository" class="App\Repository\AdherantRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\DemandeRepository" class="App\Repository\DemandeRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -863,6 +878,7 @@
       </argument>
       <argument type="collection">
         <argument>App\Form\AdherantType</argument>
+        <argument>App\Form\DemandeType</argument>
         <argument>App\Form\EmployeurType</argument>
         <argument>App\Form\PartenaireType</argument>
         <argument>App\Form\ServiceType</argument>
@@ -1201,7 +1217,7 @@
       <argument type="service" id="form.registry"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id=".service_locator.BchRh1G"/>
+      <argument type="service" id=".service_locator.LOmn1EF"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.transformation_failure_handling"/>
@@ -3972,7 +3988,7 @@
       <factory class="Doctrine\ORM\EntityManager" method="create"/>
     </service>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory" public="false">
-      <argument type="service" id=".service_locator.IDB.gLm"/>
+      <argument type="service" id=".service_locator.e5rgB6b"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -4927,6 +4943,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\AdherantController" class="App\Controller\AdherantController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\AdherantController" class="App\Controller\AdherantController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\AdherantController" class="App\Controller\AdherantController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DemandeController" class="App\Controller\DemandeController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DemandeController" class="App\Controller\DemandeController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\DemandeController" class="App\Controller\DemandeController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EmployeurController" class="App\Controller\EmployeurController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EmployeurController" class="App\Controller\EmployeurController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\EmployeurController" class="App\Controller\EmployeurController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4947,6 +4966,8 @@
     <service id=".abstract.instanceof.App\Controller\UserController" class="App\Controller\UserController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\AdherantType" class="App\Form\AdherantType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\AdherantType" class="App\Form\AdherantType" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\DemandeType" class="App\Form\DemandeType" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Form\DemandeType" class="App\Form\DemandeType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\EmployeurType" class="App\Form\EmployeurType" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Form\EmployeurType" class="App\Form\EmployeurType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Component\Form\FormTypeInterface.0.App\Form\PartenaireType" class="App\Form\PartenaireType" autowire="true" abstract="true"/>
@@ -4957,6 +4978,8 @@
     <service id=".abstract.instanceof.App\Form\UserType" class="App\Form\UserType" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\AdherantRepository" class="App\Repository\AdherantRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\AdherantRepository" class="App\Repository\AdherantRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\DemandeRepository" class="App\Repository\DemandeRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\DemandeRepository" class="App\Repository\DemandeRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\EmployeurRepository" class="App\Repository\EmployeurRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\EmployeurRepository" class="App\Repository\EmployeurRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\PartenaireRepository" class="App\Repository\PartenaireRepository" autowire="true" abstract="true"/>
@@ -5258,6 +5281,18 @@
         <argument key="adherant" type="service" id=".errored..service_locator.hBGLGON.App\Entity\Adherant"/>
       </argument>
     </service>
+    <service id=".service_locator.vE4L5m0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="demandeRepository" type="service" id="App\Repository\DemandeRepository"/>
+      </argument>
+    </service>
+    <service id=".service_locator.RB1wHuF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="demande" type="service" id=".errored..service_locator.RB1wHuF.App\Entity\Demande"/>
+      </argument>
+    </service>
     <service id=".service_locator.TOSRW5M" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5312,7 +5347,7 @@
         <argument key="user" type="service" id=".errored..service_locator.tIQ5Q0N.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.exIJSQV" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.ZfWdGsu" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AdherantController::delete" type="service" id=".service_locator.hBGLGON"/>
@@ -5321,6 +5356,10 @@
         <argument key="App\Controller\AdherantController::importZip" type="service" id=".service_locator.6j8BIGb"/>
         <argument key="App\Controller\AdherantController::index" type="service" id=".service_locator.6j8BIGb"/>
         <argument key="App\Controller\AdherantController::show" type="service" id=".service_locator.hBGLGON"/>
+        <argument key="App\Controller\DemandeController::delete" type="service" id=".service_locator.RB1wHuF"/>
+        <argument key="App\Controller\DemandeController::edit" type="service" id=".service_locator.RB1wHuF"/>
+        <argument key="App\Controller\DemandeController::index" type="service" id=".service_locator.vE4L5m0"/>
+        <argument key="App\Controller\DemandeController::show" type="service" id=".service_locator.RB1wHuF"/>
         <argument key="App\Controller\EmployeurController::delete" type="service" id=".service_locator.EszxBQ6"/>
         <argument key="App\Controller\EmployeurController::edit" type="service" id=".service_locator.EszxBQ6"/>
         <argument key="App\Controller\EmployeurController::index" type="service" id=".service_locator.TOSRW5M"/>
@@ -5344,6 +5383,10 @@
         <argument key="App\Controller\AdherantController:importZip" type="service" id=".service_locator.6j8BIGb"/>
         <argument key="App\Controller\AdherantController:index" type="service" id=".service_locator.6j8BIGb"/>
         <argument key="App\Controller\AdherantController:show" type="service" id=".service_locator.hBGLGON"/>
+        <argument key="App\Controller\DemandeController:delete" type="service" id=".service_locator.RB1wHuF"/>
+        <argument key="App\Controller\DemandeController:edit" type="service" id=".service_locator.RB1wHuF"/>
+        <argument key="App\Controller\DemandeController:index" type="service" id=".service_locator.vE4L5m0"/>
+        <argument key="App\Controller\DemandeController:show" type="service" id=".service_locator.RB1wHuF"/>
         <argument key="App\Controller\EmployeurController:delete" type="service" id=".service_locator.EszxBQ6"/>
         <argument key="App\Controller\EmployeurController:edit" type="service" id=".service_locator.EszxBQ6"/>
         <argument key="App\Controller\EmployeurController:index" type="service" id=".service_locator.TOSRW5M"/>
@@ -5422,10 +5465,11 @@
       <argument type="service" id="debug.argument_resolver.not_tagged_controller.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".service_locator.BchRh1G" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.LOmn1EF" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Form\AdherantType" type="service" id="App\Form\AdherantType"/>
+        <argument key="App\Form\DemandeType" type="service" id="App\Form\DemandeType"/>
         <argument key="App\Form\EmployeurType" type="service" id="App\Form\EmployeurType"/>
         <argument key="App\Form\PartenaireType" type="service" id="App\Form\PartenaireType"/>
         <argument key="App\Form\ServiceType" type="service" id="App\Form\ServiceType"/>
@@ -5595,10 +5639,11 @@
         <argument key="doctrine.orm.default_listeners.attach_entity_listeners" type="service" id="doctrine.orm.default_listeners.attach_entity_listeners"/>
       </argument>
     </service>
-    <service id=".service_locator.IDB.gLm" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.e5rgB6b" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\AdherantRepository" type="service" id="App\Repository\AdherantRepository"/>
+        <argument key="App\Repository\DemandeRepository" type="service" id="App\Repository\DemandeRepository"/>
         <argument key="App\Repository\EmployeurRepository" type="service" id="App\Repository\EmployeurRepository"/>
         <argument key="App\Repository\PartenaireRepository" type="service" id="App\Repository\PartenaireRepository"/>
         <argument key="App\Repository\ServiceRepository" type="service" id="App\Repository\ServiceRepository"/>
@@ -5656,6 +5701,12 @@
     <service id=".service_locator.vdmMuyE.App\Controller\AdherantController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\AdherantController"/>
       <argument>App\Controller\AdherantController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\DemandeController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\DemandeController"/>
+      <argument>App\Controller\DemandeController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -5838,12 +5889,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.exIJSQV"/>
+      <argument type="service" id=".service_locator.ZfWdGsu"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.exIJSQV"/>
+      <argument type="service" id=".service_locator.ZfWdGsu"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -5854,6 +5905,7 @@
       <factory class="Symfony\Component\HttpClient\HttpClient" method="create"/>
     </service>
     <service id=".errored..service_locator.hBGLGON.App\Entity\Adherant" class="App\Entity\Adherant"/>
+    <service id=".errored..service_locator.RB1wHuF.App\Entity\Demande" class="App\Entity\Demande"/>
     <service id=".errored..service_locator.EszxBQ6.App\Entity\Employeur" class="App\Entity\Employeur"/>
     <service id=".errored..service_locator.njGqpVl.App\Entity\Partenaire" class="App\Entity\Partenaire"/>
     <service id=".errored..service_locator._6fPF7O.App\Entity\Service" class="App\Entity\Service"/>
@@ -6235,7 +6287,7 @@
     <service id="Symfony\Component\Security\Core\User\UserCheckerInterface" alias="security.user_checker" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.exIJSQV"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ZfWdGsu"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>
